@@ -23,7 +23,7 @@ class TvGamesTableDataSource: NSObject, UITableViewDataSource {
    
    private var notificationObserver: NSObjectProtocol?
    
-   private (set) var allItems: [FPTGame] = []
+   private (set) var allItems: [TvGamesDataSourceItem] = []
    
    //MARK: NSObject
    
@@ -45,17 +45,21 @@ class TvGamesTableDataSource: NSObject, UITableViewDataSource {
    //MARK: UITableViewDataSource
    
    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return allItems.count
+      return allItems[section].items.count
    }
    
    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-      return 1
+      return allItems.count
    }
    
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       var cell = tableView.dequeueReusableCellWithIdentifier(TvGamesTableViewCell.cellIdentifier) as? TvGamesTableViewCell
-      cell?.item = allItems[indexPath.row]
+      cell?.item = allItems[indexPath.section].items[indexPath.row]
       return cell!
+   }
+   
+   func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+      return allItems[section].date.description
    }
    
 }
@@ -74,12 +78,36 @@ class TvGamesTableDelegate: NSObject, UITableViewDelegate {
    
 }
 
+struct TvGamesDataSourceItem {
+   var date: Moment
+   var items: [FPTGame]
+}
+
 class TvGamesDataSource {
    
-   var allItems: [FPTGame] = []
+   private var allGames: [FPTGame] = []
+   private (set) var allItems: [TvGamesDataSourceItem] = []
+   
+   private func loadDataSourceItems() {
+      var allDates = NSSet(array: allGames.map({ return moment($0.date).startOf(.Days).date() })).allObjects
+      allDates.sort { (date1, date2) -> Bool in
+         return (date1 as! NSDate).timeIntervalSince1970 < (date2 as! NSDate).timeIntervalSince1970
+      }
+      println(allDates)
+      allItems = allDates.map({ (date) -> TvGamesDataSourceItem in
+         let newItem = TvGamesDataSourceItem(date: moment(date as! NSDate), items: self.allGames.filter({ (game) -> Bool in
+            let currentDate = moment(date as! NSDate)
+            return moment(game.date) >= currentDate.startOf(.Days) && moment(game.date) < currentDate.endOf(.Days)
+         }))
+         return newItem
+      })
+      NSNotificationCenter.defaultCenter().postNotificationName(FPTConstants.Notifications.gamesDataSourceUpdatedNotification, object: self)
+   }
    
    private func parseXmlToObjects(xmlItems: [SMXMLElement]) {
+
       var addedNewItems = false
+      
       let query = PFQuery(className: FPTGame.parseClassName())
       for item in xmlItems {
          query.whereKey("guid", equalTo: item.valueWithPath("guid"))
@@ -87,14 +115,13 @@ class TvGamesDataSource {
             game.update(xmlElement: item)
          } else {
             var game = FPTGame(xmlElement: item)
-            allItems.append(game)
+            allGames.append(game)
             addedNewItems = true
          }
-         
-         if addedNewItems {
-            allItems.sort({ $0.date.timeIntervalSince1970 < $1.date.timeIntervalSince1970})
-            NSNotificationCenter.defaultCenter().postNotificationName(FPTConstants.Notifications.gamesDataSourceUpdatedNotification, object: self)
-         }
+      }
+
+      if addedNewItems {
+         loadDataSourceItems()
       }
       
    }
@@ -106,8 +133,8 @@ class TvGamesDataSource {
       query.orderByAscending("date")
       query.findObjectsInBackgroundWithBlock { (items, error) -> Void in
          if error == nil {
-            self.allItems = items as! [FPTGame]
-            NSNotificationCenter.defaultCenter().postNotificationName(FPTConstants.Notifications.gamesDataSourceUpdatedNotification, object: self)
+            self.allGames = items as! [FPTGame]
+            self.loadDataSourceItems()
          } else {
             println("error getting items from local storage: \(error)")
          }
