@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		204E36641B8CFF7C00A063A3 /* FPTAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */; };
+		2090E2971B8D188900C8BE48 /* FPTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2090E2961B8D188900C8BE48 /* FPTConstants.swift */; };
 		20B31ACA1B89DDD3002B5308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B31AC81B89DDD3002B5308 /* Main.storyboard */; };
 		20B31ACC1B89DDD3002B5308 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B31ACB1B89DDD3002B5308 /* Images.xcassets */; };
 		20B31ACF1B89DDD3002B5308 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B31ACD1B89DDD3002B5308 /* LaunchScreen.xib */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTAppConfiguration.swift; sourceTree = "<group>"; };
+		2090E2961B8D188900C8BE48 /* FPTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTConstants.swift; sourceTree = "<group>"; };
 		20B31ABF1B89DDD3002B5308 /* Futebol365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futebol365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B31AC31B89DDD3002B5308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20B31AC91B89DDD3002B5308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */,
+				2090E2961B8D188900C8BE48 /* FPTConstants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				20B31B061B8A177E002B5308 /* FPTGame.swift in Sources */,
 				20B31B031B8A1648002B5308 /* TvGamesViewController.swift in Sources */,
 				204E36641B8CFF7C00A063A3 /* FPTAppConfiguration.swift in Sources */,
+				2090E2971B8D188900C8BE48 /* FPTConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,68 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Tv Games View Controller-->
+        <scene sceneID="Sns-hQ-Sdk">
+            <objects>
+                <viewController id="Aku-Z3-leY" customClass="TvGamesViewController" customModule="Futebol365" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LPB-to-ViT"/>
+                        <viewControllerLayoutGuide type="bottom" id="myq-Da-Fj1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qTh-ac-vC3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="I6E-4Y-Bqb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TvGamesCellIdentifier" id="6CA-qi-VIx" customClass="TvGamesTableViewCell" customModule="Futebol365" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6CA-qi-VIx" id="p4G-SS-Rnz">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGs-0E-amU">
+                                                    <rect key="frame" x="8" y="11" width="584" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="jtJ-3M-fUW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WGs-0E-amU" firstAttribute="leading" secondItem="p4G-SS-Rnz" secondAttribute="leadingMargin" id="9nw-UL-Fwi"/>
+                                                <constraint firstAttribute="centerY" secondItem="WGs-0E-amU" secondAttribute="centerY" id="OqO-m1-vXj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="WGs-0E-amU" secondAttribute="trailing" id="Ptz-dn-7Mp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="WGs-0E-amU" id="5f4-oF-bhx"/>
+                                            <segue destination="tRB-yi-bUd" kind="show" identifier="showDetail" id="b4F-kG-Xd5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="I6E-4Y-Bqb" secondAttribute="bottom" id="Ojz-n8-dPn"/>
+                            <constraint firstAttribute="trailing" secondItem="I6E-4Y-Bqb" secondAttribute="trailing" id="Q31-mX-ifN"/>
+                            <constraint firstItem="I6E-4Y-Bqb" firstAttribute="top" secondItem="qTh-ac-vC3" secondAttribute="top" id="QpK-KN-nd4"/>
+                            <constraint firstItem="I6E-4Y-Bqb" firstAttribute="leading" secondItem="qTh-ac-vC3" secondAttribute="leading" id="yZp-wR-HpY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dqc-6J-LbF"/>
+                    <connections>
+                        <outlet property="tableView" destination="I6E-4Y-Bqb" id="N49-rb-sCW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PYK-db-igq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805" y="-621"/>
+        </scene>
         <!--Detail-->
         <scene sceneID="fap-xn-KZq">
             <objects>
@@ -41,37 +103,6 @@
             </objects>
             <point key="canvasLocation" x="1483" y="-666"/>
         </scene>
-        <!--Tv Games-->
-        <scene sceneID="AgA-OY-ofK">
-            <objects>
-                <tableViewController title="Tv Games" id="dZP-zY-Y1D" customClass="TvGamesViewController" customModule="Futebol365" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KXN-7d-WC8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="wNc-MR-uGu">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wNc-MR-uGu" id="WYM-rR-6p0">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="tRB-yi-bUd" kind="show" identifier="showDetail" id="cCS-RF-XNr"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="dZP-zY-Y1D" id="gVR-7k-aIA"/>
-                            <outlet property="delegate" destination="dZP-zY-Y1D" id="QOZ-LQ-Nh4"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Tv Games" id="ln3-nN-rMm"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wxk-kf-7D2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="724" y="-666"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="D5g-Un-NRD">
             <objects>
@@ -81,7 +112,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="dZP-zY-Y1D" kind="relationship" relationship="rootViewController" id="p0A-qc-GPH"/>
+                        <segue destination="Aku-Z3-leY" kind="relationship" relationship="rootViewController" id="JEK-gY-Z6g"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94Z-lf-iWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
