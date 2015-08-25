@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20B31AC51B89DDD3002B5308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B31AC41B89DDD3002B5308 /* AppDelegate.swift */; };
-		20B31AC71B89DDD3002B5308 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B31AC61B89DDD3002B5308 /* ViewController.swift */; };
 		20B31ACA1B89DDD3002B5308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B31AC81B89DDD3002B5308 /* Main.storyboard */; };
 		20B31ACC1B89DDD3002B5308 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B31ACB1B89DDD3002B5308 /* Images.xcassets */; };
 		20B31ACF1B89DDD3002B5308 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B31ACD1B89DDD3002B5308 /* LaunchScreen.xib */; };
 		20B31ADB1B89DDD3002B5308 /* Futebol365Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B31ADA1B89DDD3002B5308 /* Futebol365Tests.swift */; };
+		20B31AF11B89E9CC002B5308 /* SMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B31AEF1B89E9CC002B5308 /* SMXMLDocument.m */; };
+		20B31AF51B89EA60002B5308 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31AF41B89EA60002B5308 /* SystemConfiguration.framework */; };
+		20B31AF71B89EA70002B5308 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31AF61B89EA70002B5308 /* libsqlite3.dylib */; };
+		20B31AF91B89EA78002B5308 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31AF81B89EA78002B5308 /* libstdc++.6.dylib */; };
+		20B31B011B8A1648002B5308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B31AFE1B8A1648002B5308 /* AppDelegate.swift */; };
+		20B31B021B8A1648002B5308 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B31AFF1B8A1648002B5308 /* DetailViewController.swift */; };
+		20B31B031B8A1648002B5308 /* TvGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B31B001B8A1648002B5308 /* TvGamesViewController.swift */; };
+		20B31B061B8A177E002B5308 /* FPTGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B31B051B8A177E002B5308 /* FPTGame.swift */; };
+		20B31B081B8A187C002B5308 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31B071B8A187C002B5308 /* AudioToolbox.framework */; };
+		20B31B0D1B8A18CF002B5308 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31B091B8A18CF002B5308 /* Bolts.framework */; };
+		20B31B0E1B8A18CF002B5308 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31B0A1B8A18CF002B5308 /* Parse.framework */; };
+		20B31B0F1B8A18CF002B5308 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31B0B1B8A18CF002B5308 /* ParseCrashReporting.framework */; };
+		20B31B101B8A18CF002B5308 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31B0C1B8A18CF002B5308 /* ParseUI.framework */; };
+		5474C93D85B0756B611A941B /* Pods_Futebol365.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94CC59F61A4EBEF823968E3 /* Pods_Futebol365.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +40,30 @@
 /* Begin PBXFileReference section */
 		20B31ABF1B89DDD3002B5308 /* Futebol365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futebol365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B31AC31B89DDD3002B5308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20B31AC41B89DDD3002B5308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20B31AC61B89DDD3002B5308 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		20B31AC91B89DDD3002B5308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20B31ACB1B89DDD3002B5308 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		20B31ACE1B89DDD3002B5308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		20B31AD41B89DDD3002B5308 /* Futebol365Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Futebol365Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B31AD91B89DDD3002B5308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20B31ADA1B89DDD3002B5308 /* Futebol365Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Futebol365Tests.swift; sourceTree = "<group>"; };
+		20B31AE81B89DEB5002B5308 /* Futebol365-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Futebol365-Bridging-Header.h"; sourceTree = "<group>"; };
+		20B31AEE1B89E9CC002B5308 /* SMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMXMLDocument.h; sourceTree = "<group>"; };
+		20B31AEF1B89E9CC002B5308 /* SMXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMXMLDocument.m; sourceTree = "<group>"; };
+		20B31AF41B89EA60002B5308 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		20B31AF61B89EA70002B5308 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		20B31AF81B89EA78002B5308 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		20B31AFE1B8A1648002B5308 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20B31AFF1B8A1648002B5308 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		20B31B001B8A1648002B5308 /* TvGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvGamesViewController.swift; sourceTree = "<group>"; };
+		20B31B051B8A177E002B5308 /* FPTGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTGame.swift; sourceTree = "<group>"; };
+		20B31B071B8A187C002B5308 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		20B31B091B8A18CF002B5308 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		20B31B0A1B8A18CF002B5308 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		20B31B0B1B8A18CF002B5308 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		20B31B0C1B8A18CF002B5308 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		AFB24A55F6454469695E75A8 /* Pods-Futebol365.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Futebol365.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Futebol365/Pods-Futebol365.debug.xcconfig"; sourceTree = "<group>"; };
+		B516E300B7E7F92E76F23B2B /* Pods-Futebol365.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Futebol365.release.xcconfig"; path = "Pods/Target Support Files/Pods-Futebol365/Pods-Futebol365.release.xcconfig"; sourceTree = "<group>"; };
+		E94CC59F61A4EBEF823968E3 /* Pods_Futebol365.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Futebol365.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +71,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B31B081B8A187C002B5308 /* AudioToolbox.framework in Frameworks */,
+				20B31B0F1B8A18CF002B5308 /* ParseCrashReporting.framework in Frameworks */,
+				20B31B101B8A18CF002B5308 /* ParseUI.framework in Frameworks */,
+				20B31AF91B89EA78002B5308 /* libstdc++.6.dylib in Frameworks */,
+				20B31AF71B89EA70002B5308 /* libsqlite3.dylib in Frameworks */,
+				20B31AF51B89EA60002B5308 /* SystemConfiguration.framework in Frameworks */,
+				20B31B0E1B8A18CF002B5308 /* Parse.framework in Frameworks */,
+				20B31B0D1B8A18CF002B5308 /* Bolts.framework in Frameworks */,
+				5474C93D85B0756B611A941B /* Pods_Futebol365.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +96,11 @@
 		20B31AB61B89DDD3002B5308 = {
 			isa = PBXGroup;
 			children = (
+				20B31AFA1B89EAB3002B5308 /* Frameworks */,
 				20B31AC11B89DDD3002B5308 /* Futebol365 */,
 				20B31AD71B89DDD3002B5308 /* Futebol365Tests */,
 				20B31AC01B89DDD3002B5308 /* Products */,
+				F4E870C9054AA253ED35DC01 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,11 +116,10 @@
 		20B31AC11B89DDD3002B5308 /* Futebol365 */ = {
 			isa = PBXGroup;
 			children = (
-				20B31AC41B89DDD3002B5308 /* AppDelegate.swift */,
-				20B31AC61B89DDD3002B5308 /* ViewController.swift */,
-				20B31AC81B89DDD3002B5308 /* Main.storyboard */,
-				20B31ACB1B89DDD3002B5308 /* Images.xcassets */,
-				20B31ACD1B89DDD3002B5308 /* LaunchScreen.xib */,
+				20B31AE41B89DE2C002B5308 /* External */,
+				20B31B041B8A1661002B5308 /* Models */,
+				20B31AFD1B8A1648002B5308 /* Controllers */,
+				20B31AFB1B8A160F002B5308 /* UI */,
 				20B31AC21B89DDD3002B5308 /* Supporting Files */,
 			);
 			path = Futebol365;
@@ -91,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				20B31AC31B89DDD3002B5308 /* Info.plist */,
+				20B31AE81B89DEB5002B5308 /* Futebol365-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -112,6 +151,84 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		20B31AE41B89DE2C002B5308 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				20B31AEB1B89E9CC002B5308 /* Parse */,
+				20B31AED1B89E9CC002B5308 /* SMXML */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		20B31AEB1B89E9CC002B5308 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				20B31B091B8A18CF002B5308 /* Bolts.framework */,
+				20B31B0A1B8A18CF002B5308 /* Parse.framework */,
+				20B31B0B1B8A18CF002B5308 /* ParseCrashReporting.framework */,
+				20B31B0C1B8A18CF002B5308 /* ParseUI.framework */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		20B31AED1B89E9CC002B5308 /* SMXML */ = {
+			isa = PBXGroup;
+			children = (
+				20B31AEE1B89E9CC002B5308 /* SMXMLDocument.h */,
+				20B31AEF1B89E9CC002B5308 /* SMXMLDocument.m */,
+			);
+			path = SMXML;
+			sourceTree = "<group>";
+		};
+		20B31AFA1B89EAB3002B5308 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20B31B071B8A187C002B5308 /* AudioToolbox.framework */,
+				20B31AF81B89EA78002B5308 /* libstdc++.6.dylib */,
+				20B31AF61B89EA70002B5308 /* libsqlite3.dylib */,
+				20B31AF41B89EA60002B5308 /* SystemConfiguration.framework */,
+				E94CC59F61A4EBEF823968E3 /* Pods_Futebol365.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20B31AFB1B8A160F002B5308 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				20B31AC81B89DDD3002B5308 /* Main.storyboard */,
+				20B31ACB1B89DDD3002B5308 /* Images.xcassets */,
+				20B31ACD1B89DDD3002B5308 /* LaunchScreen.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		20B31AFD1B8A1648002B5308 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				20B31AFE1B8A1648002B5308 /* AppDelegate.swift */,
+				20B31AFF1B8A1648002B5308 /* DetailViewController.swift */,
+				20B31B001B8A1648002B5308 /* TvGamesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		20B31B041B8A1661002B5308 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20B31B051B8A177E002B5308 /* FPTGame.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4E870C9054AA253ED35DC01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFB24A55F6454469695E75A8 /* Pods-Futebol365.debug.xcconfig */,
+				B516E300B7E7F92E76F23B2B /* Pods-Futebol365.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20B31ADE1B89DDD3002B5308 /* Build configuration list for PBXNativeTarget "Futebol365" */;
 			buildPhases = (
+				A7254BD98ACCF689BADEDB9A /* Check Pods Manifest.lock */,
 				20B31ABB1B89DDD3002B5308 /* Sources */,
 				20B31ABC1B89DDD3002B5308 /* Frameworks */,
 				20B31ABD1B89DDD3002B5308 /* Resources */,
+				EB069F947A4449A2FB486FE3 /* Embed Pods Frameworks */,
+				CEBF4105F2E4982A2B27780D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,13 +327,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A7254BD98ACCF689BADEDB9A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CEBF4105F2E4982A2B27780D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Futebol365/Pods-Futebol365-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB069F947A4449A2FB486FE3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Futebol365/Pods-Futebol365-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		20B31ABB1B89DDD3002B5308 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20B31AC71B89DDD3002B5308 /* ViewController.swift in Sources */,
-				20B31AC51B89DDD3002B5308 /* AppDelegate.swift in Sources */,
+				20B31B021B8A1648002B5308 /* DetailViewController.swift in Sources */,
+				20B31B011B8A1648002B5308 /* AppDelegate.swift in Sources */,
+				20B31AF11B89E9CC002B5308 /* SMXMLDocument.m in Sources */,
+				20B31B061B8A177E002B5308 /* FPTGame.swift in Sources */,
+				20B31B031B8A1648002B5308 /* TvGamesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,21 +509,33 @@
 		};
 		20B31ADF1B89DDD3002B5308 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFB24A55F6454469695E75A8 /* Pods-Futebol365.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Futebol365/External/Parse",
+				);
 				INFOPLIST_FILE = Futebol365/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Futebol365-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		20B31AE01B89DDD3002B5308 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B516E300B7E7F92E76F23B2B /* Pods-Futebol365.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Futebol365/External/Parse",
+				);
 				INFOPLIST_FILE = Futebol365/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Futebol365-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +592,7 @@
 				20B31AE01B89DDD3002B5308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20B31AE11B89DDD3002B5308 /* Build configuration list for PBXNativeTarget "Futebol365Tests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +601,7 @@
 				20B31AE31B89DDD3002B5308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

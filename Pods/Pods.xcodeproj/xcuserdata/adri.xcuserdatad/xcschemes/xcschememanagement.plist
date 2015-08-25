@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Cent.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Dollar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Futebol365.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftMoment.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>24D24EA4C3FB9DE12613D9F70F627A50</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>528AC879B1F683E3D592E273C7381D69</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66D005083813866908DDB895F347CD7B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76707C7216742F51DBC93867EB6E51E4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

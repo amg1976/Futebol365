@@ -1,0 +1,25 @@
+PODS:
+  - Cent (3.0.3):
+    - Dollar (~> 3.0.3)
+  - Dollar (3.0.3)
+  - SwiftMoment (0.1.2)
+
+DEPENDENCIES:
+  - Cent
+  - SwiftMoment (from `https://github.com/akosma/SwiftMoment.git`)
+
+EXTERNAL SOURCES:
+  SwiftMoment:
+    :git: https://github.com/akosma/SwiftMoment.git
+
+CHECKOUT OPTIONS:
+  SwiftMoment:
+    :commit: 8fc4d840400ec62f9298e14dae92bb3d63011cc8
+    :git: https://github.com/akosma/SwiftMoment.git
+
+SPEC CHECKSUMS:
+  Cent: 3ad646e53bb97085bbf1e63520eeb3b5430dac6a
+  Dollar: ae37f1da42cdc16061fcc1e91a070281b207f5c8
+  SwiftMoment: 2734cb1fc3d6e42a3ba8c4e188e64d3418d85972
+
+COCOAPODS: 0.38.2
