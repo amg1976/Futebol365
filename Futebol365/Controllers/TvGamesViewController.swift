@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftMoment
 import Parse
 
 class TvGamesViewController: UITableViewController, NSURLConnectionDataDelegate {
@@ -16,9 +17,15 @@ class TvGamesViewController: UITableViewController, NSURLConnectionDataDelegate 
     //MARK: TvGamesViewController
     
     private func parseXmlToObjects(xmlItems: [SMXMLElement]) {
+        let query = PFQuery(className: FPTGame.parseClassName())
         for item in xmlItems {
-            var game = FPTGame(xmlElement: item)
-            allItems.append(game)
+            query.whereKey("guid", equalTo: item.valueWithPath("guid"))
+            if let game = query.findObjects()?.first as? FPTGame {
+                game.update(xmlElement: item)
+            } else {
+                var game = FPTGame(xmlElement: item)
+                allItems.append(game)
+            }
         }
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -29,6 +36,8 @@ class TvGamesViewController: UITableViewController, NSURLConnectionDataDelegate 
     private func loadGames() {
         
         let query = PFQuery(className: FPTGame.parseClassName())
+        query.whereKey("date", greaterThan: moment().startOf(.Days).date())
+        query.orderByAscending("date")
         query.findObjectsInBackgroundWithBlock { (items, error) -> Void in
             if error == nil {
                 self.allItems = items as! [FPTGame]
@@ -37,18 +46,23 @@ class TvGamesViewController: UITableViewController, NSURLConnectionDataDelegate 
                 println("error getting items from local storage: \(error)")
             }
         }
-/*
-        let urlRequest = NSURLRequest(URL: NSURL(string: "http://feeds.feedburner.com/futebol365/futebolnatv")!)
-        NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue()) { (urlResponse, responseData, responseError) -> Void in
-            if responseError == nil {
-                var xmlError: NSError?
-                let xmlDoc = SMXMLDocument(data: responseData, error: &xmlError)
-                self.parseXmlToObjects(xmlDoc.childNamed("channel").childrenNamed("item") as! [SMXMLElement])
-            } else {
-                println("error getting xml: \(responseError)")
+
+        if moment().intervalSince(FPTAppConfiguration.sharedInstance.lastGamesUpdate).days > 1 {
+            println("will get data from rss feed")
+            let urlRequest = NSURLRequest(URL: NSURL(string: "http://feeds.feedburner.com/futebol365/futebolnatv")!)
+            NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue()) { (urlResponse, responseData, responseError) -> Void in
+                if responseError == nil {
+                    println("Got data from rss feed")
+                    var xmlError: NSError?
+                    let xmlDoc = SMXMLDocument(data: responseData, error: &xmlError)
+                    self.parseXmlToObjects(xmlDoc.childNamed("channel").childrenNamed("item") as! [SMXMLElement])
+                    FPTAppConfiguration.sharedInstance.lastGamesUpdate = moment()
+                } else {
+                    println("error getting xml: \(responseError)")
+                }
             }
         }
-*/
+
     }
     
     //MARK: UIViewController

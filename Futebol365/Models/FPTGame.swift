@@ -39,17 +39,20 @@ class FPTGame: PFObject, PFSubclassing {
     @NSManaged var tvChannel: String
     @NSManaged var homeTeam: String
     @NSManaged var awayTeam: String
-    var date: Moment {
-        return moment(dateString, "yyyy-MM-dd' às 'HH:mm")!
-    }
+    @NSManaged var date: NSDate
     
     override init() {
         super.init()
     }
     
+    //MARK: FPTGame
+    
     init(xmlElement: SMXMLElement) {
         super.init(className:FPTGame.parseClassName())
-        
+        update(xmlElement: xmlElement)
+    }
+    
+    func update(#xmlElement: SMXMLElement) {
         link = xmlElement.valueWithPath("link")
         title = xmlElement.valueWithPath("title")
         guid = xmlElement.valueWithPath("guid")
@@ -62,10 +65,16 @@ class FPTGame: PFObject, PFSubclassing {
                 homeTeam = _title.substringWithRange(match.rangeAtIndex(2))
                 awayTeam = _title.substringWithRange(match.rangeAtIndex(3))
                 dateString = _title.substringWithRange(match.rangeAtIndex(4))
+                date = moment(dateString, "yyyy-MM-dd' às 'HH:mm")!.date()
             }
         }
-        
         self.saveEventually()
     }
 
+}
+
+extension Moment {
+    func date() -> NSDate {
+        return NSDate(timeIntervalSince1970: self.epoch())
+    }
 }

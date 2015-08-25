@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		204E36641B8CFF7C00A063A3 /* FPTAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */; };
 		20B31ACA1B89DDD3002B5308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B31AC81B89DDD3002B5308 /* Main.storyboard */; };
 		20B31ACC1B89DDD3002B5308 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B31ACB1B89DDD3002B5308 /* Images.xcassets */; };
 		20B31ACF1B89DDD3002B5308 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B31ACD1B89DDD3002B5308 /* LaunchScreen.xib */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTAppConfiguration.swift; sourceTree = "<group>"; };
 		20B31ABF1B89DDD3002B5308 /* Futebol365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futebol365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B31AC31B89DDD3002B5308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20B31AC91B89DDD3002B5308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		204E36621B8CFF5000A063A3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		20B31AB61B89DDD3002B5308 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +126,7 @@
 		20B31AC11B89DDD3002B5308 /* Futebol365 */ = {
 			isa = PBXGroup;
 			children = (
+				204E36621B8CFF5000A063A3 /* Helpers */,
 				20B31AE41B89DE2C002B5308 /* External */,
 				20B31B041B8A1661002B5308 /* Models */,
 				20B31AFD1B8A1648002B5308 /* Controllers */,
@@ -385,6 +396,7 @@
 				20B31AF11B89E9CC002B5308 /* SMXMLDocument.m in Sources */,
 				20B31B061B8A177E002B5308 /* FPTGame.swift in Sources */,
 				20B31B031B8A1648002B5308 /* TvGamesViewController.swift in Sources */,
+				204E36641B8CFF7C00A063A3 /* FPTAppConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
