@@ -10,6 +10,12 @@ import UIKit
 import SwiftMoment
 import Parse
 
+class TvGamesTableViewHeader: UITableViewHeaderFooterView {
+   static let headerIdentifier = "TvGamesTableViewHeaderIdentifier"
+
+   @IBOutlet weak var date: UILabel!
+}
+
 class TvGamesTableViewCell: UITableViewCell {
    
    static let cellIdentifier = "TvGamesCellIdentifier"
@@ -18,6 +24,20 @@ class TvGamesTableViewCell: UITableViewCell {
    @IBOutlet weak var teams: UILabel!
    @IBOutlet weak var time: UILabel!
    @IBOutlet weak var channelName: UILabel!
+   
+   func updateStyle() {
+      if let gameItem = item {
+         if moment().intervalSince(moment(gameItem.date)).days > 0 {
+            teams.textColor = UIColor.lightGrayColor()
+            time.textColor = UIColor.lightGrayColor()
+            channelName.textColor = UIColor.lightGrayColor()
+         } else {
+            teams.textColor = UIColor.darkGrayColor()
+            time.textColor = UIColor.darkGrayColor()
+            channelName.textColor = UIColor.darkGrayColor()
+         }
+      }
+   }
    
 }
 
@@ -60,10 +80,6 @@ class TvGamesTableDataSource: NSObject, UITableViewDataSource {
       return cell!
    }
    
-   func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-      return allItems[section].date.format(dateFormat: "yyyy-MM-dd")
-   }
-   
 }
 
 class TvGamesTableDelegate: NSObject, UITableViewDelegate {
@@ -76,8 +92,27 @@ class TvGamesTableDelegate: NSObject, UITableViewDelegate {
          tableCell.teams.text = "\(tableCell.item!.homeTeam) - \(tableCell.item!.awayTeam)"
          tableCell.time.text = moment(tableCell.item!.date).format(dateFormat: "HH:mm")
          tableCell.channelName.text = tableCell.item?.tvChannel
+         tableCell.updateStyle()
       }
       
+   }
+   
+   func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+      return 40
+   }
+   
+   func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+      let datasource = tableView.dataSource as? TvGamesTableDataSource
+      (view as! TvGamesTableViewHeader).date.text = datasource?.allItems[section].date.format(dateFormat: "yyyy-MM-dd")
+   }
+   
+   func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+      let view = tableView.dequeueReusableHeaderFooterViewWithIdentifier(TvGamesTableViewHeader.headerIdentifier) as? TvGamesTableViewHeader
+      return view
+   }
+
+   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+      tableView.deselectRowAtIndexPath(indexPath, animated: false)
    }
    
 }
@@ -188,6 +223,7 @@ class TvGamesViewController: UIViewController, NSURLConnectionDataDelegate {
       notificationObserver = NSNotificationCenter.defaultCenter().addObserverForName(FPTConstants.Notifications.gamesDataSourceUpdatedNotification, object: gamesDataSource, queue: nil, usingBlock: { (notification) -> Void in
          self.tableView.reloadData()
       })
+      tableView.registerNib(UINib(nibName: "TvGamesTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: TvGamesTableViewHeader.headerIdentifier)
       tableView.dataSource = tableDataSource
       tableView.delegate = tableDelegate
       gamesDataSource.loadGames()

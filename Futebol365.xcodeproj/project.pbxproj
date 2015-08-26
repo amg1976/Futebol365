@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		201967F01B8E365F001D1639 /* TvGamesTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201967EF1B8E365F001D1639 /* TvGamesTableViewHeader.xib */; };
 		204E36641B8CFF7C00A063A3 /* FPTAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */; };
 		2090E2971B8D188900C8BE48 /* FPTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2090E2961B8D188900C8BE48 /* FPTConstants.swift */; };
 		20B31ACA1B89DDD3002B5308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B31AC81B89DDD3002B5308 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		201967EF1B8E365F001D1639 /* TvGamesTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TvGamesTableViewHeader.xib; sourceTree = "<group>"; };
 		204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTAppConfiguration.swift; sourceTree = "<group>"; };
 		2090E2961B8D188900C8BE48 /* FPTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTConstants.swift; sourceTree = "<group>"; };
 		20B31ABF1B89DDD3002B5308 /* Futebol365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futebol365.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +214,7 @@
 				20B31AC81B89DDD3002B5308 /* Main.storyboard */,
 				20B31ACB1B89DDD3002B5308 /* Images.xcassets */,
 				20B31ACD1B89DDD3002B5308 /* LaunchScreen.xib */,
+				201967EF1B8E365F001D1639 /* TvGamesTableViewHeader.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			files = (
 				20B31ACA1B89DDD3002B5308 /* Main.storyboard in Resources */,
 				20B31ACF1B89DDD3002B5308 /* LaunchScreen.xib in Resources */,
+				201967F01B8E365F001D1639 /* TvGamesTableViewHeader.xib in Resources */,
 				20B31ACC1B89DDD3002B5308 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
