@@ -15,7 +15,9 @@ class TvGamesTableViewCell: UITableViewCell {
    static let cellIdentifier = "TvGamesCellIdentifier"
    var item: FPTGame?
    
-   @IBOutlet weak var label: UILabel!
+   @IBOutlet weak var teams: UILabel!
+   @IBOutlet weak var time: UILabel!
+   @IBOutlet weak var channelName: UILabel!
    
 }
 
@@ -59,7 +61,7 @@ class TvGamesTableDataSource: NSObject, UITableViewDataSource {
    }
    
    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-      return allItems[section].date.description
+      return allItems[section].date.format(dateFormat: "yyyy-MM-dd")
    }
    
 }
@@ -71,7 +73,9 @@ class TvGamesTableDelegate: NSObject, UITableViewDelegate {
    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
       
       if let tableCell = cell as? TvGamesTableViewCell {
-         tableCell.label?.text = tableCell.item?.title
+         tableCell.teams.text = "\(tableCell.item!.homeTeam) - \(tableCell.item!.awayTeam)"
+         tableCell.time.text = moment(tableCell.item!.date).format(dateFormat: "HH:mm")
+         tableCell.channelName.text = tableCell.item?.tvChannel
       }
       
    }
