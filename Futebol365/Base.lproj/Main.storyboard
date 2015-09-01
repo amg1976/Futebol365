@@ -73,6 +73,30 @@
                                             <segue destination="tRB-yi-bUd" kind="show" identifier="showDetail" id="b4F-kG-Xd5"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TvGamesTableViewHeaderIdentifier" id="Sbz-Lp-ewg" customClass="TvGamesTableViewHeader" customModule="Futebol365" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sbz-Lp-ewg" id="FYD-bx-hvq">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-05-05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbM-oS-Fgz">
+                                                    <rect key="frame" x="8" y="8" width="584" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="13"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fbM-oS-Fgz" secondAttribute="bottom" id="CHU-3f-nz7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fbM-oS-Fgz" secondAttribute="trailing" id="pHx-S2-dn7"/>
+                                                <constraint firstItem="fbM-oS-Fgz" firstAttribute="leading" secondItem="FYD-bx-hvq" secondAttribute="leadingMargin" id="rLC-aJ-ron"/>
+                                                <constraint firstItem="fbM-oS-Fgz" firstAttribute="top" secondItem="FYD-bx-hvq" secondAttribute="topMargin" id="wT9-4T-rlw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="date" destination="fbM-oS-Fgz" id="Yn5-Ar-wxU"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>

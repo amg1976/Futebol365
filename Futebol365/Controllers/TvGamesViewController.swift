@@ -10,7 +10,7 @@ import UIKit
 import SwiftMoment
 import Parse
 
-class TvGamesTableViewHeader: UITableViewHeaderFooterView {
+class TvGamesTableViewHeader: UITableViewCell {
    static let headerIdentifier = "TvGamesTableViewHeaderIdentifier"
 
    @IBOutlet weak var date: UILabel!
@@ -103,11 +103,11 @@ class TvGamesTableDelegate: NSObject, UITableViewDelegate {
    
    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
       let datasource = tableView.dataSource as? TvGamesTableDataSource
-      (view as! TvGamesTableViewHeader).date.text = datasource?.allItems[section].date.format(dateFormat: "yyyy-MM-dd")
+      (view as! TvGamesTableViewHeader).date.text = datasource?.allItems[section].date.format(dateFormat: "EEEE, yyyy-MM-dd")
    }
    
    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-      let view = tableView.dequeueReusableHeaderFooterViewWithIdentifier(TvGamesTableViewHeader.headerIdentifier) as? TvGamesTableViewHeader
+      let view = tableView.dequeueReusableCellWithIdentifier(TvGamesTableViewHeader.headerIdentifier) as? TvGamesTableViewHeader
       return view
    }
 
@@ -223,7 +223,6 @@ class TvGamesViewController: UIViewController, NSURLConnectionDataDelegate {
       notificationObserver = NSNotificationCenter.defaultCenter().addObserverForName(FPTConstants.Notifications.gamesDataSourceUpdatedNotification, object: gamesDataSource, queue: nil, usingBlock: { (notification) -> Void in
          self.tableView.reloadData()
       })
-      tableView.registerNib(UINib(nibName: "TvGamesTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: TvGamesTableViewHeader.headerIdentifier)
       tableView.dataSource = tableDataSource
       tableView.delegate = tableDelegate
       gamesDataSource.loadGames()
