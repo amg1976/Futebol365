@@ -89,7 +89,7 @@ class TvGamesTableDelegate: NSObject, UITableViewDelegate {
    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
       
       if let tableCell = cell as? TvGamesTableViewCell {
-         tableCell.teams.text = "\(tableCell.item!.homeTeam) - \(tableCell.item!.awayTeam)"
+         tableCell.teams.text = "\(tableCell.item!.homeTeamName) - \(tableCell.item!.awayTeamName)"
          tableCell.time.text = moment(tableCell.item!.date).format(dateFormat: "HH:mm")
          tableCell.channelName.text = tableCell.item?.tvChannel
          tableCell.updateStyle()
@@ -143,28 +143,6 @@ class TvGamesDataSource {
       NSNotificationCenter.defaultCenter().postNotificationName(FPTConstants.Notifications.gamesDataSourceUpdatedNotification, object: self)
    }
    
-   private func parseXmlToObjects(xmlItems: [SMXMLElement]) {
-
-      var addedNewItems = false
-      
-      let query = PFQuery(className: FPTGame.parseClassName())
-      for item in xmlItems {
-         query.whereKey("guid", equalTo: item.valueWithPath("guid"))
-         if let game = query.findObjects()?.first as? FPTGame {
-            game.update(xmlElement: item)
-         } else {
-            var game = FPTGame(xmlElement: item)
-            allGames.append(game)
-            addedNewItems = true
-         }
-      }
-
-      if addedNewItems {
-         loadDataSourceItems()
-      }
-      
-   }
-   
    func loadGames() {
       
       let query = PFQuery(className: FPTGame.parseClassName())
@@ -176,22 +154,6 @@ class TvGamesDataSource {
             self.loadDataSourceItems()
          } else {
             println("error getting items from local storage: \(error)")
-         }
-      }
-      
-      if moment().intervalSince(FPTAppConfiguration.sharedInstance.lastGamesUpdate).days > 1 {
-         println("will get data from rss feed")
-         let urlRequest = NSURLRequest(URL: NSURL(string: "http://feeds.feedburner.com/futebol365/futebolnatv")!)
-         NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue()) { (urlResponse, responseData, responseError) -> Void in
-            if responseError == nil {
-               println("Got data from rss feed")
-               var xmlError: NSError?
-               let xmlDoc = SMXMLDocument(data: responseData, error: &xmlError)
-               self.parseXmlToObjects(xmlDoc.childNamed("channel").childrenNamed("item") as! [SMXMLElement])
-               FPTAppConfiguration.sharedInstance.lastGamesUpdate = moment()
-            } else {
-               println("error getting xml: \(responseError)")
-            }
          }
       }
       

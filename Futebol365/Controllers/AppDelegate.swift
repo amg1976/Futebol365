@@ -11,6 +11,7 @@ import UIKit
 import Bolts
 import Parse
 import ParseCrashReporting
+import SwiftMoment
 
 // If you want to use any of the UI components, uncomment this line
 // import ParseUI
@@ -32,4 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+}
+
+extension Moment {
+   func date() -> NSDate {
+      return NSDate(timeIntervalSince1970: self.epoch())
+   }
 }

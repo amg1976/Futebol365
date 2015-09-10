@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		204E36641B8CFF7C00A063A3 /* FPTAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */; };
+		206CE90D1BA238CB003FBBEF /* FPTTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206CE90C1BA238CB003FBBEF /* FPTTeam.swift */; };
 		2090E2971B8D188900C8BE48 /* FPTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2090E2961B8D188900C8BE48 /* FPTConstants.swift */; };
 		20B31ACA1B89DDD3002B5308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B31AC81B89DDD3002B5308 /* Main.storyboard */; };
 		20B31ACC1B89DDD3002B5308 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B31ACB1B89DDD3002B5308 /* Images.xcassets */; };
 		20B31ACF1B89DDD3002B5308 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B31ACD1B89DDD3002B5308 /* LaunchScreen.xib */; };
 		20B31ADB1B89DDD3002B5308 /* Futebol365Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B31ADA1B89DDD3002B5308 /* Futebol365Tests.swift */; };
-		20B31AF11B89E9CC002B5308 /* SMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B31AEF1B89E9CC002B5308 /* SMXMLDocument.m */; };
 		20B31AF51B89EA60002B5308 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31AF41B89EA60002B5308 /* SystemConfiguration.framework */; };
 		20B31AF71B89EA70002B5308 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31AF61B89EA70002B5308 /* libsqlite3.dylib */; };
 		20B31AF91B89EA78002B5308 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31AF81B89EA78002B5308 /* libstdc++.6.dylib */; };
@@ -41,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTAppConfiguration.swift; sourceTree = "<group>"; };
+		206CE90C1BA238CB003FBBEF /* FPTTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTTeam.swift; sourceTree = "<group>"; };
 		2090E2961B8D188900C8BE48 /* FPTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTConstants.swift; sourceTree = "<group>"; };
 		20B31ABF1B89DDD3002B5308 /* Futebol365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futebol365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B31AC31B89DDD3002B5308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,8 +52,6 @@
 		20B31AD91B89DDD3002B5308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20B31ADA1B89DDD3002B5308 /* Futebol365Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Futebol365Tests.swift; sourceTree = "<group>"; };
 		20B31AE81B89DEB5002B5308 /* Futebol365-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Futebol365-Bridging-Header.h"; sourceTree = "<group>"; };
-		20B31AEE1B89E9CC002B5308 /* SMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMXMLDocument.h; sourceTree = "<group>"; };
-		20B31AEF1B89E9CC002B5308 /* SMXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMXMLDocument.m; sourceTree = "<group>"; };
 		20B31AF41B89EA60002B5308 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		20B31AF61B89EA70002B5308 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		20B31AF81B89EA78002B5308 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
@@ -169,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				20B31AEB1B89E9CC002B5308 /* Parse */,
-				20B31AED1B89E9CC002B5308 /* SMXML */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -183,15 +181,6 @@
 				20B31B0C1B8A18CF002B5308 /* ParseUI.framework */,
 			);
 			path = Parse;
-			sourceTree = "<group>";
-		};
-		20B31AED1B89E9CC002B5308 /* SMXML */ = {
-			isa = PBXGroup;
-			children = (
-				20B31AEE1B89E9CC002B5308 /* SMXMLDocument.h */,
-				20B31AEF1B89E9CC002B5308 /* SMXMLDocument.m */,
-			);
-			path = SMXML;
 			sourceTree = "<group>";
 		};
 		20B31AFA1B89EAB3002B5308 /* Frameworks */ = {
@@ -229,6 +218,7 @@
 		20B31B041B8A1661002B5308 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				206CE90C1BA238CB003FBBEF /* FPTTeam.swift */,
 				20B31B051B8A177E002B5308 /* FPTGame.swift */,
 			);
 			path = Models;
@@ -397,8 +387,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				20B31B021B8A1648002B5308 /* DetailViewController.swift in Sources */,
+				206CE90D1BA238CB003FBBEF /* FPTTeam.swift in Sources */,
 				20B31B011B8A1648002B5308 /* AppDelegate.swift in Sources */,
-				20B31AF11B89E9CC002B5308 /* SMXMLDocument.m in Sources */,
 				20B31B061B8A177E002B5308 /* FPTGame.swift in Sources */,
 				20B31B031B8A1648002B5308 /* TvGamesViewController.swift in Sources */,
 				204E36641B8CFF7C00A063A3 /* FPTAppConfiguration.swift in Sources */,
