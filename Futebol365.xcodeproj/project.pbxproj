@@ -105,6 +105,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		206CE90E1BA385EC003FBBEF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				20B31ACB1B89DDD3002B5308 /* Images.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		20B31AB61B89DDD3002B5308 = {
 			isa = PBXGroup;
 			children = (
@@ -198,8 +206,8 @@
 		20B31AFB1B8A160F002B5308 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				206CE90E1BA385EC003FBBEF /* Assets */,
 				20B31AC81B89DDD3002B5308 /* Main.storyboard */,
-				20B31ACB1B89DDD3002B5308 /* Images.xcassets */,
 				20B31ACD1B89DDD3002B5308 /* LaunchScreen.xib */,
 			);
 			name = UI;
