@@ -5,17 +5,31 @@ PODS:
   - SwiftMoment (0.1.2)
 
 DEPENDENCIES:
-  - Cent
-  - SwiftMoment (from `https://github.com/akosma/SwiftMoment.git`)
+  - Cent (from `https://github.com/ankurp/Dollar.swift.git`, branch `swift-2-xcode-7`)
+  - Dollar (from `https://github.com/ankurp/Dollar.swift.git`, branch `swift-2-xcode-7`)
+  - SwiftMoment (from `https://github.com/amg1976/SwiftMoment.git`, branch `swift-2-0`)
 
 EXTERNAL SOURCES:
+  Cent:
+    :branch: swift-2-xcode-7
+    :git: https://github.com/ankurp/Dollar.swift.git
+  Dollar:
+    :branch: swift-2-xcode-7
+    :git: https://github.com/ankurp/Dollar.swift.git
   SwiftMoment:
-    :git: https://github.com/akosma/SwiftMoment.git
+    :branch: swift-2-0
+    :git: https://github.com/amg1976/SwiftMoment.git
 
 CHECKOUT OPTIONS:
+  Cent:
+    :commit: a26876b19e25c6e7f1262040505f7835974e483c
+    :git: https://github.com/ankurp/Dollar.swift.git
+  Dollar:
+    :commit: a26876b19e25c6e7f1262040505f7835974e483c
+    :git: https://github.com/ankurp/Dollar.swift.git
   SwiftMoment:
-    :commit: 8fc4d840400ec62f9298e14dae92bb3d63011cc8
-    :git: https://github.com/akosma/SwiftMoment.git
+    :commit: 281343e5d2455c189127a33cc2d7ce2927c1e11a
+    :git: https://github.com/amg1976/SwiftMoment.git
 
 SPEC CHECKSUMS:
   Cent: 3ad646e53bb97085bbf1e63520eeb3b5430dac6a

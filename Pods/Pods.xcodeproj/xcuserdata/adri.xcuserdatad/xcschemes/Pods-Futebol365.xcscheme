@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "31806320A20E9709901DF427"
+               BlueprintIdentifier = "8A35625A65FB6A975099D725"
                BuildableName = "Pods_Futebol365.framework"
                BlueprintName = "Pods-Futebol365"
                ReferencedContainer = "container:Pods.xcodeproj">

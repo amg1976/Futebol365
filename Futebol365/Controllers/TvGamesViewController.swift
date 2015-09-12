@@ -75,7 +75,7 @@ class TvGamesTableDataSource: NSObject, UITableViewDataSource {
    }
    
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-      var cell = tableView.dequeueReusableCellWithIdentifier(TvGamesTableViewCell.cellIdentifier) as? TvGamesTableViewCell
+      let cell = tableView.dequeueReusableCellWithIdentifier(TvGamesTableViewCell.cellIdentifier) as? TvGamesTableViewCell
       cell?.item = allItems[indexPath.section].items[indexPath.row]
       return cell!
    }
@@ -90,7 +90,7 @@ class TvGamesTableDelegate: NSObject, UITableViewDelegate {
       
       if let tableCell = cell as? TvGamesTableViewCell {
          tableCell.teams.text = "\(tableCell.item!.homeTeamName) - \(tableCell.item!.awayTeamName)"
-         tableCell.time.text = moment(tableCell.item!.date).format(dateFormat: "HH:mm")
+         tableCell.time.text = moment(tableCell.item!.date).format("HH:mm")
          tableCell.channelName.text = tableCell.item?.tvChannel
          tableCell.updateStyle()
       }
@@ -103,7 +103,7 @@ class TvGamesTableDelegate: NSObject, UITableViewDelegate {
    
    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
       let datasource = tableView.dataSource as? TvGamesTableDataSource
-      (view as! TvGamesTableViewHeader).date.text = datasource?.allItems[section].date.format(dateFormat: "EEEE, yyyy-MM-dd")
+      (view as! TvGamesTableViewHeader).date.text = datasource?.allItems[section].date.format("EEEE, yyyy-MM-dd")
    }
    
    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -129,10 +129,10 @@ class TvGamesDataSource {
    
    private func loadDataSourceItems() {
       var allDates = NSSet(array: allGames.map({ return moment($0.date).startOf(.Days).date() })).allObjects
-      allDates.sort { (date1, date2) -> Bool in
+      allDates.sortInPlace { (date1, date2) -> Bool in
          return (date1 as! NSDate).timeIntervalSince1970 < (date2 as! NSDate).timeIntervalSince1970
       }
-      println(allDates)
+      print(allDates)
       allItems = allDates.map({ (date) -> TvGamesDataSourceItem in
          let newItem = TvGamesDataSourceItem(date: moment(date as! NSDate), items: self.allGames.filter({ (game) -> Bool in
             let currentDate = moment(date as! NSDate)
@@ -153,7 +153,7 @@ class TvGamesDataSource {
             self.allGames = items as! [FPTGame]
             self.loadDataSourceItems()
          } else {
-            println("error getting items from local storage: \(error)")
+            print("error getting items from local storage: \(error)")
          }
       }
       

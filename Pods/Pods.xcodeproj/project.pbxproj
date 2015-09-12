@@ -7,142 +7,142 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01B5DB1F3495B88E5EBD54410C0AB259 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B63C03924063C87F856034E5FE7F3B /* Range.swift */; };
 		0A6712EE1E1F2A1DB4B5F7DEA346B9F0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863DBACEE1DA0412A8B354B88C1DCF1 /* Extensions.swift */; };
-		18298AEA9FD5E21FB3FCEF018806034D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5586BCE22316ED23D4D1B96B3F723E /* Foundation.framework */; };
-		1846947B3BC689ABD4ADE347709870CC /* Dollar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C22D92E93FAE1ECC17FCC2A7814406D /* Dollar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1C2A6B74E22C68D89D91D14A033F04BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5586BCE22316ED23D4D1B96B3F723E /* Foundation.framework */; };
-		2158E3531799ADDD85A77B9E4146B418 /* Cent-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4B612C4252094FEB3D50422734F7786 /* Cent-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F439F741B7E2F9E4D5399C9669A74A7 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D02B11EB3A4D61972092D4702B88A /* Array.swift */; };
+		2046A4564E73D694DAA4AAC654C8D24B /* Cent.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F5D803E3740CDC1E62555574D000DF /* Cent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		345A3BFD9B82431D2EFFF4B1E34CD85D /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5371C67A41980754C646914B15A78BE7 /* Duration.swift */; };
-		3B406634456F2C81D3C1A9D966B29F2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5586BCE22316ED23D4D1B96B3F723E /* Foundation.framework */; };
-		3BBB735B444E1FBDFADD8E7D0D85A57E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E3B708620116C9197E685BEDF8FEF7 /* Date.swift */; };
-		3E5131DCF95601443EFABED72E0C9476 /* Dollar.h in Headers */ = {isa = PBXBuildFile; fileRef = 009DC0E7C90AF83C03429CF9FAE6A46C /* Dollar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A5B879A4870AF6C2153F8D681DA9F22 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D360B39C94DFA890BE028CE2C7B8D46 /* Dollar.framework */; };
+		36CC00F4E3ED5833F62CC725B5C79FDA /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2A70927E71822AFE6C10864847673F /* Regex.swift */; };
+		47E665C9CF9C2C0C21485EB323DCB33C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5269C70596E53E35E62E48D6A018EA12 /* Date.swift */; };
 		4AFCDED3A48D432866E1627DCE4E65B4 /* TimeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E72E7B1065F362B81918EA0CF90A5E7 /* TimeUnit.swift */; };
-		4D1DC648A97D6F168CCBB09D235437B8 /* Cent.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ED37B86112FD971667B0F4AF4E43827 /* Cent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C16791F2A1843511183AA486F56EEF8 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DAF4B8A7FE83281D67F16921F93F844 /* Dollar.framework */; };
+		53C5CFEBA4A9F963DC33C793B3138264 /* Dollar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C5A0DEE4B66C5F327CC8683578B90BB /* Dollar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F5A47AEF91703075C207C662752958A /* Pods-Futebol365-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDC7CAD9C32701FB6AE2A5951EBA19C /* Pods-Futebol365-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73FD6395491DF01060CC549122623AA0 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B2D72BC684FB108A3F4C1B0F2165C7 /* Range.swift */; };
-		79B2A0F63DA30A7D5398E079B3B015DF /* Cent-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2A1B99A6811A19E38062D991F6C2B2 /* Cent-dummy.m */; };
-		7FA0064BBB5AEB00CEE1960624C87ABF /* Dollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B163B85B3B7899CB6A98E935B18ECA2 /* Dollar.swift */; };
+		6328573CD1B34B3D5028025E31F8C175 /* Dollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6FFA99D71009CA279769006707BC01 /* Dollar.swift */; };
+		7C160C6DEDF409D0543807F606F9B6E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5586BCE22316ED23D4D1B96B3F723E /* Foundation.framework */; };
 		85EDE6D53A9CFA15645FCC29B091F89F /* SwiftMoment-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53361901E9A7B9B3B22CD372926AA5F2 /* SwiftMoment-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		875D1CC3F503F4A2CA1BBFC449A58605 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5AD6635C91E704D5AF2EF559A4F865 /* Array.swift */; };
+		917C76DC3CE6B963A16CE81F81369E7F /* Dollar.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D1A76EC3CE9C5B755FC3E9308971B08 /* Dollar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94141C93F76CAAC60A13D5786D5FB2D6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C16108DB606BA610CC97047E68CCAF /* String.swift */; };
 		9886B8419E10928652D9B974EEFD6E17 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C554514A88FFBB71A50F44E5E84EC62B /* Moment.swift */; };
-		9BE04564D0DA02BF40F90B8004CC4953 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67AF68C2916847AB1A948B24EE69240 /* Dictionary.swift */; };
 		A86C30D72640E9085D42D5E121D09991 /* Pods-Futebol365-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E570EB65C36A8449893C31B33FCF096B /* Pods-Futebol365-dummy.m */; };
-		AA22313B1182A49EE8D9DE9BD7111676 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F0592A70DB38A7D13B548110F2E029 /* Int.swift */; };
+		A9D97E4EE3493815D4C14F9BE1727B38 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A1930941718E9765AD02C4417B9020 /* Dictionary.swift */; };
 		AF53B42CE6011672F1668F9839231B69 /* SwiftMoment.h in Headers */ = {isa = PBXBuildFile; fileRef = DDEC413D186F6FD2DC73FD9AC2DBABE3 /* SwiftMoment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9A1644B2E3B7BD7C6D4C1BA6CBC2BA0 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B5E9D5495B486A48835C5E2C19162B /* Operators.swift */; };
-		C639741AE4EFB2E073217F8D5B1E8CC5 /* AutoCurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3BAF55D8750922A72293B51D20115 /* AutoCurry.swift */; };
-		D1B9B01887BF603B3BD60A7EA7B83139 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1FD0C0ED6E1E6B4DADF1F8FEF740FD /* String.swift */; };
-		D699434AE0657C2A526B8C574D3A2251 /* Dollar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0063E26B00C635EBCA485EB968BF62 /* Dollar-dummy.m */; };
-		EDBDC3C16E41B72B45CD3466C6147F91 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586B7830062B92BB0B2008B9F187BAD7 /* Regex.swift */; };
+		C7D78ECAD6E0C9E98182269849A4936D /* AutoCurry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD987E62BB928B750F94597122C46F /* AutoCurry.swift */; };
+		CB9966F53D5C097C6030A3AE4C3FF15D /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177A179624E3ECB23F65212886B1FB28 /* Int.swift */; };
+		D0B6F86FF16E1F0A97386DB6D1BBD4B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5586BCE22316ED23D4D1B96B3F723E /* Foundation.framework */; };
+		D584C776E1F37C192319D75B8A99FDA4 /* Dollar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF7E15EC84CC1E7592CCDC52197A0ED /* Dollar-dummy.m */; };
+		E094643948CDB5304A3B645DCDDB7588 /* Cent-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC97DC4B308A82F486E227688E14DD8 /* Cent-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1C686B9C8ADDCB13F4238AC68D56A07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5586BCE22316ED23D4D1B96B3F723E /* Foundation.framework */; };
+		F970D293B9A02BD5DDDE0A49B8544955 /* Cent-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C5453D20FF2168B4CA6B594851D317 /* Cent-dummy.m */; };
 		FFFF901CBA1FC75305CF443DC6483E1D /* SwiftMoment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF060819618B7F2655811C08F1E5EED6 /* SwiftMoment-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0566F4250BBC98CB51396D032C3E379E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 24D24EA4C3FB9DE12613D9F70F627A50;
-			remoteInfo = Dollar;
-		};
-		06C65F61F062711879B5A4F320A19116 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 528AC879B1F683E3D592E273C7381D69;
-			remoteInfo = Cent;
-		};
-		1A8DC4A92937B35B827ECA63EE88E14F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 24D24EA4C3FB9DE12613D9F70F627A50;
-			remoteInfo = Dollar;
-		};
-		E9142F884B4DE1B73C1B8D09CF629031 /* PBXContainerItemProxy */ = {
+		01D8508075C8DF913967CE76E526F983 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 66D005083813866908DDB895F347CD7B;
 			remoteInfo = SwiftMoment;
 		};
+		48E7444750512A9F7650687BC72A5951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EED0DFBD51042A6474A614902B7E78C;
+			remoteInfo = Dollar;
+		};
+		CB58FC2F58265575116D4D760D2E4A12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EED0DFBD51042A6474A614902B7E78C;
+			remoteInfo = Dollar;
+		};
+		FC57077B674CC412981AD156EF92CC95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B41455AE8173529180096B7B18DF9E18;
+			remoteInfo = Cent;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		009DC0E7C90AF83C03429CF9FAE6A46C /* Dollar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Dollar.h; path = Dollar/Dollar/Dollar.h; sourceTree = "<group>"; };
-		030E4E4A282E798A2A083CECE4C241EC /* Dollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02B63C03924063C87F856034E5FE7F3B /* Range.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Range.swift; path = Cent/Cent/Range.swift; sourceTree = "<group>"; };
+		07F5D803E3740CDC1E62555574D000DF /* Cent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Cent.h; path = Cent/Cent/Cent.h; sourceTree = "<group>"; };
 		07FB6DA55CE34AB176912F803DD1C54D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0863DBACEE1DA0412A8B354B88C1DCF1 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = SwiftMoment/SwiftMoment/Extensions.swift; sourceTree = "<group>"; };
+		15CD73BEF7349DC1BC971F40307977B0 /* Cent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		177A179624E3ECB23F65212886B1FB28 /* Int.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Int.swift; path = Cent/Cent/Int.swift; sourceTree = "<group>"; };
 		1CDC7CAD9C32701FB6AE2A5951EBA19C /* Pods-Futebol365-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Futebol365-umbrella.h"; sourceTree = "<group>"; };
+		1DF7E15EC84CC1E7592CCDC52197A0ED /* Dollar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Dollar-dummy.m"; sourceTree = "<group>"; };
+		1EC97DC4B308A82F486E227688E14DD8 /* Cent-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cent-umbrella.h"; sourceTree = "<group>"; };
 		2149A2CDF40CD1C5F6F0388FF6D39E44 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21A44CD3382AD37BC10541B89461674A /* Pods-Futebol365.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Futebol365.modulemap"; sourceTree = "<group>"; };
-		2B163B85B3B7899CB6A98E935B18ECA2 /* Dollar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dollar.swift; path = Dollar/Dollar/Dollar.swift; sourceTree = "<group>"; };
-		2D360B39C94DFA890BE028CE2C7B8D46 /* Dollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27EF45C30EAF7F79033210F4F955EC13 /* Cent-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Cent-Private.xcconfig"; sourceTree = "<group>"; };
+		2C5A0DEE4B66C5F327CC8683578B90BB /* Dollar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Dollar-umbrella.h"; sourceTree = "<group>"; };
+		2DAF4B8A7FE83281D67F16921F93F844 /* Dollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E069B9026589B3F064C78F2CDF8C62A /* SwiftMoment-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftMoment-Private.xcconfig"; sourceTree = "<group>"; };
 		2E174D30278637C9A30BAD9093F81BA6 /* Dollar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Dollar.xcconfig; sourceTree = "<group>"; };
 		37B5E9D5495B486A48835C5E2C19162B /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = SwiftMoment/SwiftMoment/Operators.swift; sourceTree = "<group>"; };
 		3EC988511B3521309CBA961FED7AF02F /* Cent-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cent-prefix.pch"; sourceTree = "<group>"; };
 		4D27AD7F30EB7F9CBDC368B363F6FF48 /* Dollar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Dollar-prefix.pch"; sourceTree = "<group>"; };
+		5269C70596E53E35E62E48D6A018EA12 /* Date.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Cent/Cent/Date.swift; sourceTree = "<group>"; };
 		53361901E9A7B9B3B22CD372926AA5F2 /* SwiftMoment-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMoment-umbrella.h"; sourceTree = "<group>"; };
 		5371C67A41980754C646914B15A78BE7 /* Duration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Duration.swift; path = SwiftMoment/SwiftMoment/Duration.swift; sourceTree = "<group>"; };
-		586B7830062B92BB0B2008B9F187BAD7 /* Regex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Regex.swift; path = Cent/Cent/Regex.swift; sourceTree = "<group>"; };
-		58E3B708620116C9197E685BEDF8FEF7 /* Date.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Cent/Cent/Date.swift; sourceTree = "<group>"; };
 		59DC14EECF936B403C67604B5C632210 /* SwiftMoment.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMoment.xcconfig; sourceTree = "<group>"; };
-		62B2D72BC684FB108A3F4C1B0F2165C7 /* Range.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Range.swift; path = Cent/Cent/Range.swift; sourceTree = "<group>"; };
+		5D1A76EC3CE9C5B755FC3E9308971B08 /* Dollar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Dollar.h; path = Dollar/Dollar/Dollar.h; sourceTree = "<group>"; };
+		5DB909CB744D63FEA5554B19241A7CE6 /* Dollar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Dollar-Private.xcconfig"; sourceTree = "<group>"; };
+		60BE0A9852047AB641140F2346E2C289 /* Dollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A39A1EBBCFC76E0DE334BA4FEE2B4DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E5AD6635C91E704D5AF2EF559A4F865 /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Cent/Cent/Array.swift; sourceTree = "<group>"; };
 		70CEA0F71D50FD88698DCAD5877651F9 /* Dollar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Dollar.modulemap; sourceTree = "<group>"; };
-		77A83F4216359D84489EBE0655868305 /* SwiftMoment-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftMoment-Private.xcconfig"; sourceTree = "<group>"; };
 		7D4578E72DDF8721F626994CCA8A0784 /* Pods-Futebol365-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Futebol365-frameworks.sh"; sourceTree = "<group>"; };
 		7E72E7B1065F362B81918EA0CF90A5E7 /* TimeUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeUnit.swift; path = SwiftMoment/SwiftMoment/TimeUnit.swift; sourceTree = "<group>"; };
 		7F72612B924E8396DCF2B7D0EB112055 /* Pods_Futebol365.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Futebol365.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		83F0592A70DB38A7D13B548110F2E029 /* Int.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Int.swift; path = Cent/Cent/Int.swift; sourceTree = "<group>"; };
-		8ED37B86112FD971667B0F4AF4E43827 /* Cent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Cent.h; path = Cent/Cent/Cent.h; sourceTree = "<group>"; };
+		85C5453D20FF2168B4CA6B594851D317 /* Cent-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cent-dummy.m"; sourceTree = "<group>"; };
+		95A1930941718E9765AD02C4417B9020 /* Dictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary.swift; path = Cent/Cent/Dictionary.swift; sourceTree = "<group>"; };
 		966EF6F870C38957478A603F51CA61B5 /* Pods-Futebol365-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Futebol365-resources.sh"; sourceTree = "<group>"; };
-		96C3BAF55D8750922A72293B51D20115 /* AutoCurry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoCurry.swift; path = Dollar/Dollar/AutoCurry.swift; sourceTree = "<group>"; };
-		976AFADB247C31CC75E145F19A12CCC2 /* Cent-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Cent-Private.xcconfig"; sourceTree = "<group>"; };
 		9977A041E1529AC610C4DE73D7463BED /* SwiftMoment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMoment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD15AF99C473610B91E684C4D3C0A52 /* SwiftMoment.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftMoment.modulemap; sourceTree = "<group>"; };
-		9C22D92E93FAE1ECC17FCC2A7814406D /* Dollar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Dollar-umbrella.h"; sourceTree = "<group>"; };
+		9B6FFA99D71009CA279769006707BC01 /* Dollar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dollar.swift; path = Dollar/Dollar/Dollar.swift; sourceTree = "<group>"; };
 		9EDC795CC455C9FA756EBEFB4D44BE4F /* Cent.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cent.xcconfig; sourceTree = "<group>"; };
-		9EEEE14D8C002E5A9D1C84679949F113 /* Pods-Futebol365.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Futebol365.release.xcconfig"; sourceTree = "<group>"; };
+		A0C16108DB606BA610CC97047E68CCAF /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = String.swift; path = Cent/Cent/String.swift; sourceTree = "<group>"; };
 		A16AE88893E4F15F5F4E6896C81023EE /* SwiftMoment-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMoment-prefix.pch"; sourceTree = "<group>"; };
+		A7FD987E62BB928B750F94597122C46F /* AutoCurry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoCurry.swift; path = Dollar/Dollar/AutoCurry.swift; sourceTree = "<group>"; };
+		B42FBCABBEA6F4CEC600DE58306BAEC6 /* Pods-Futebol365.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Futebol365.release.xcconfig"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C0E1422758FB2415C40AEA20EB30E31C /* Pods-Futebol365.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Futebol365.debug.xcconfig"; sourceTree = "<group>"; };
 		C554514A88FFBB71A50F44E5E84EC62B /* Moment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Moment.swift; path = SwiftMoment/SwiftMoment/Moment.swift; sourceTree = "<group>"; };
-		C67AF68C2916847AB1A948B24EE69240 /* Dictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary.swift; path = Cent/Cent/Dictionary.swift; sourceTree = "<group>"; };
-		C70D02B11EB3A4D61972092D4702B88A /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Cent/Cent/Array.swift; sourceTree = "<group>"; };
-		CC2A1B99A6811A19E38062D991F6C2B2 /* Cent-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cent-dummy.m"; sourceTree = "<group>"; };
 		D94872824A348CBB40B9864324110834 /* Pods-Futebol365-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Futebol365-acknowledgements.plist"; sourceTree = "<group>"; };
+		DC2A70927E71822AFE6C10864847673F /* Regex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Regex.swift; path = Cent/Cent/Regex.swift; sourceTree = "<group>"; };
 		DD5586BCE22316ED23D4D1B96B3F723E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DDEC413D186F6FD2DC73FD9AC2DBABE3 /* SwiftMoment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftMoment.h; path = SwiftMoment/SwiftMoment/SwiftMoment.h; sourceTree = "<group>"; };
 		DF060819618B7F2655811C08F1E5EED6 /* SwiftMoment-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftMoment-dummy.m"; sourceTree = "<group>"; };
 		E09B8565F729B71FEC97C4A02F2CEE7E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E570EB65C36A8449893C31B33FCF096B /* Pods-Futebol365-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Futebol365-dummy.m"; sourceTree = "<group>"; };
-		F2CDA7E63C150BEDB39B522E764C8DB0 /* Cent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4B612C4252094FEB3D50422734F7786 /* Cent-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cent-umbrella.h"; sourceTree = "<group>"; };
-		F750C19A46A208B1AE7BAD5DD6B0CAEC /* Pods-Futebol365.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Futebol365.debug.xcconfig"; sourceTree = "<group>"; };
 		F8274723AC0557FAB5B7DAEC88D2B4E8 /* Cent.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Cent.modulemap; sourceTree = "<group>"; };
-		FC1FD0C0ED6E1E6B4DADF1F8FEF740FD /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = String.swift; path = Cent/Cent/String.swift; sourceTree = "<group>"; };
 		FCC762ADA6966C180579B5275E8C5035 /* Pods-Futebol365-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Futebol365-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FD0063E26B00C635EBCA485EB968BF62 /* Dollar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Dollar-dummy.m"; sourceTree = "<group>"; };
-		FDFC33BBE00856A72EE1203FA48262C2 /* Dollar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Dollar-Private.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5563AA3ECCAC11BBCC1FBE2715B8D51F /* Frameworks */ = {
+		2D70688879A6C8BB61AE172332CCCDB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B406634456F2C81D3C1A9D966B29F2C /* Foundation.framework in Frameworks */,
+				4C16791F2A1843511183AA486F56EEF8 /* Dollar.framework in Frameworks */,
+				7C160C6DEDF409D0543807F606F9B6E7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		831EE2D0315A6A7349D22324F62776AA /* Frameworks */ = {
+		58E202CA18053A0D9809E2EC1387F402 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A5B879A4870AF6C2153F8D681DA9F22 /* Dollar.framework in Frameworks */,
-				18298AEA9FD5E21FB3FCEF018806034D /* Foundation.framework in Frameworks */,
+				D0B6F86FF16E1F0A97386DB6D1BBD4B3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,14 +182,14 @@
 		29182B885A094FE3FAD6B9E74FDFFFCC /* Cent */ = {
 			isa = PBXGroup;
 			children = (
-				C70D02B11EB3A4D61972092D4702B88A /* Array.swift */,
-				8ED37B86112FD971667B0F4AF4E43827 /* Cent.h */,
-				58E3B708620116C9197E685BEDF8FEF7 /* Date.swift */,
-				C67AF68C2916847AB1A948B24EE69240 /* Dictionary.swift */,
-				83F0592A70DB38A7D13B548110F2E029 /* Int.swift */,
-				62B2D72BC684FB108A3F4C1B0F2165C7 /* Range.swift */,
-				586B7830062B92BB0B2008B9F187BAD7 /* Regex.swift */,
-				FC1FD0C0ED6E1E6B4DADF1F8FEF740FD /* String.swift */,
+				6E5AD6635C91E704D5AF2EF559A4F865 /* Array.swift */,
+				07F5D803E3740CDC1E62555574D000DF /* Cent.h */,
+				5269C70596E53E35E62E48D6A018EA12 /* Date.swift */,
+				95A1930941718E9765AD02C4417B9020 /* Dictionary.swift */,
+				177A179624E3ECB23F65212886B1FB28 /* Int.swift */,
+				02B63C03924063C87F856034E5FE7F3B /* Range.swift */,
+				DC2A70927E71822AFE6C10864847673F /* Regex.swift */,
+				A0C16108DB606BA610CC97047E68CCAF /* String.swift */,
 				EB8A3990CA778D31D8DCD90FB8ED33EF /* Support Files */,
 			);
 			path = Cent;
@@ -208,10 +208,10 @@
 			children = (
 				70CEA0F71D50FD88698DCAD5877651F9 /* Dollar.modulemap */,
 				2E174D30278637C9A30BAD9093F81BA6 /* Dollar.xcconfig */,
-				FDFC33BBE00856A72EE1203FA48262C2 /* Dollar-Private.xcconfig */,
-				FD0063E26B00C635EBCA485EB968BF62 /* Dollar-dummy.m */,
+				5DB909CB744D63FEA5554B19241A7CE6 /* Dollar-Private.xcconfig */,
+				1DF7E15EC84CC1E7592CCDC52197A0ED /* Dollar-dummy.m */,
 				4D27AD7F30EB7F9CBDC368B363F6FF48 /* Dollar-prefix.pch */,
-				9C22D92E93FAE1ECC17FCC2A7814406D /* Dollar-umbrella.h */,
+				2C5A0DEE4B66C5F327CC8683578B90BB /* Dollar-umbrella.h */,
 				07FB6DA55CE34AB176912F803DD1C54D /* Info.plist */,
 			);
 			name = "Support Files";
@@ -221,9 +221,9 @@
 		470B1B94CA4CF895C89F6BED7A42F73E /* Dollar */ = {
 			isa = PBXGroup;
 			children = (
-				96C3BAF55D8750922A72293B51D20115 /* AutoCurry.swift */,
-				009DC0E7C90AF83C03429CF9FAE6A46C /* Dollar.h */,
-				2B163B85B3B7899CB6A98E935B18ECA2 /* Dollar.swift */,
+				A7FD987E62BB928B750F94597122C46F /* AutoCurry.swift */,
+				5D1A76EC3CE9C5B755FC3E9308971B08 /* Dollar.h */,
+				9B6FFA99D71009CA279769006707BC01 /* Dollar.swift */,
 				42B68312175DE02C6E39ABB80744272E /* Support Files */,
 			);
 			path = Dollar;
@@ -232,7 +232,7 @@
 		47EC8CE8BF00D94F16425AE1F59F63A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2D360B39C94DFA890BE028CE2C7B8D46 /* Dollar.framework */,
+				2DAF4B8A7FE83281D67F16921F93F844 /* Dollar.framework */,
 				7032B02334F9EC10CE9B68868AF3C2BD /* iOS */,
 			);
 			name = Frameworks;
@@ -278,8 +278,8 @@
 				7D4578E72DDF8721F626994CCA8A0784 /* Pods-Futebol365-frameworks.sh */,
 				966EF6F870C38957478A603F51CA61B5 /* Pods-Futebol365-resources.sh */,
 				1CDC7CAD9C32701FB6AE2A5951EBA19C /* Pods-Futebol365-umbrella.h */,
-				F750C19A46A208B1AE7BAD5DD6B0CAEC /* Pods-Futebol365.debug.xcconfig */,
-				9EEEE14D8C002E5A9D1C84679949F113 /* Pods-Futebol365.release.xcconfig */,
+				C0E1422758FB2415C40AEA20EB30E31C /* Pods-Futebol365.debug.xcconfig */,
+				B42FBCABBEA6F4CEC600DE58306BAEC6 /* Pods-Futebol365.release.xcconfig */,
 			);
 			name = "Pods-Futebol365";
 			path = "Target Support Files/Pods-Futebol365";
@@ -291,7 +291,7 @@
 				2149A2CDF40CD1C5F6F0388FF6D39E44 /* Info.plist */,
 				9AD15AF99C473610B91E684C4D3C0A52 /* SwiftMoment.modulemap */,
 				59DC14EECF936B403C67604B5C632210 /* SwiftMoment.xcconfig */,
-				77A83F4216359D84489EBE0655868305 /* SwiftMoment-Private.xcconfig */,
+				2E069B9026589B3F064C78F2CDF8C62A /* SwiftMoment-Private.xcconfig */,
 				DF060819618B7F2655811C08F1E5EED6 /* SwiftMoment-dummy.m */,
 				A16AE88893E4F15F5F4E6896C81023EE /* SwiftMoment-prefix.pch */,
 				53361901E9A7B9B3B22CD372926AA5F2 /* SwiftMoment-umbrella.h */,
@@ -303,8 +303,8 @@
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F2CDA7E63C150BEDB39B522E764C8DB0 /* Cent.framework */,
-				030E4E4A282E798A2A083CECE4C241EC /* Dollar.framework */,
+				15CD73BEF7349DC1BC971F40307977B0 /* Cent.framework */,
+				60BE0A9852047AB641140F2346E2C289 /* Dollar.framework */,
 				7F72612B924E8396DCF2B7D0EB112055 /* Pods_Futebol365.framework */,
 				9977A041E1529AC610C4DE73D7463BED /* SwiftMoment.framework */,
 			);
@@ -316,10 +316,10 @@
 			children = (
 				F8274723AC0557FAB5B7DAEC88D2B4E8 /* Cent.modulemap */,
 				9EDC795CC455C9FA756EBEFB4D44BE4F /* Cent.xcconfig */,
-				976AFADB247C31CC75E145F19A12CCC2 /* Cent-Private.xcconfig */,
-				CC2A1B99A6811A19E38062D991F6C2B2 /* Cent-dummy.m */,
+				27EF45C30EAF7F79033210F4F955EC13 /* Cent-Private.xcconfig */,
+				85C5453D20FF2168B4CA6B594851D317 /* Cent-dummy.m */,
 				3EC988511B3521309CBA961FED7AF02F /* Cent-prefix.pch */,
-				F4B612C4252094FEB3D50422734F7786 /* Cent-umbrella.h */,
+				1EC97DC4B308A82F486E227688E14DD8 /* Cent-umbrella.h */,
 				E09B8565F729B71FEC97C4A02F2CEE7E /* Info.plist */,
 			);
 			name = "Support Files";
@@ -346,34 +346,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67BB89DF835C936D1C0DB7476EF020C3 /* Headers */ = {
+		3E68C17E686AB9E873EF5BF9FC04D507 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1846947B3BC689ABD4ADE347709870CC /* Dollar-umbrella.h in Headers */,
-				3E5131DCF95601443EFABED72E0C9476 /* Dollar.h in Headers */,
+				E094643948CDB5304A3B645DCDDB7588 /* Cent-umbrella.h in Headers */,
+				2046A4564E73D694DAA4AAC654C8D24B /* Cent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A1BFD64D8E37FDD9B502F51957885861 /* Headers */ = {
+		C5CE7B28C74208A39029D3A87AAC35D3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2158E3531799ADDD85A77B9E4146B418 /* Cent-umbrella.h in Headers */,
-				4D1DC648A97D6F168CCBB09D235437B8 /* Cent.h in Headers */,
+				53C5CFEBA4A9F963DC33C793B3138264 /* Dollar-umbrella.h in Headers */,
+				917C76DC3CE6B963A16CE81F81369E7F /* Dollar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		24D24EA4C3FB9DE12613D9F70F627A50 /* Dollar */ = {
+		4EED0DFBD51042A6474A614902B7E78C /* Dollar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38A71B32409112F2777F2F0FF5B1B254 /* Build configuration list for PBXNativeTarget "Dollar" */;
+			buildConfigurationList = DB23504759680B8B0D7BAC2EEF7B4DEB /* Build configuration list for PBXNativeTarget "Dollar" */;
 			buildPhases = (
-				11F30E9CBFFBBF907BB8D03AAB57F372 /* Sources */,
-				5563AA3ECCAC11BBCC1FBE2715B8D51F /* Frameworks */,
-				67BB89DF835C936D1C0DB7476EF020C3 /* Headers */,
+				244AB34657C82560DF741F4D841A07F8 /* Sources */,
+				58E202CA18053A0D9809E2EC1387F402 /* Frameworks */,
+				C5CE7B28C74208A39029D3A87AAC35D3 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -381,25 +381,7 @@
 			);
 			name = Dollar;
 			productName = Dollar;
-			productReference = 030E4E4A282E798A2A083CECE4C241EC /* Dollar.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		528AC879B1F683E3D592E273C7381D69 /* Cent */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C8318A37B04ACC168EAEE98033FB00BC /* Build configuration list for PBXNativeTarget "Cent" */;
-			buildPhases = (
-				DBAF6AC7D99DFEE64C7AEB43BF90F608 /* Sources */,
-				831EE2D0315A6A7349D22324F62776AA /* Frameworks */,
-				A1BFD64D8E37FDD9B502F51957885861 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D9A313F2870A48E958845B0ED4EC7C89 /* PBXTargetDependency */,
-			);
-			name = Cent;
-			productName = Cent;
-			productReference = F2CDA7E63C150BEDB39B522E764C8DB0 /* Cent.framework */;
+			productReference = 60BE0A9852047AB641140F2346E2C289 /* Dollar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		66D005083813866908DDB895F347CD7B /* SwiftMoment */ = {
@@ -430,13 +412,31 @@
 			buildRules = (
 			);
 			dependencies = (
-				8591221F93813D3E1EBC62722CC0BFF6 /* PBXTargetDependency */,
-				7F7B0849A43693D162D22647E615AF04 /* PBXTargetDependency */,
-				4061A2D693828E897B86217820D17037 /* PBXTargetDependency */,
+				F9E5054A4414E8E51BBDE45047553722 /* PBXTargetDependency */,
+				827D2541B77E32AAC142705C34BC7C04 /* PBXTargetDependency */,
+				87867637A2BA62DD2E88F5D290B7F9B3 /* PBXTargetDependency */,
 			);
 			name = "Pods-Futebol365";
 			productName = "Pods-Futebol365";
 			productReference = 7F72612B924E8396DCF2B7D0EB112055 /* Pods_Futebol365.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B41455AE8173529180096B7B18DF9E18 /* Cent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D0B5E773D781C09E804070A2EAF46A0 /* Build configuration list for PBXNativeTarget "Cent" */;
+			buildPhases = (
+				369276E6951DEFC141665A5663307108 /* Sources */,
+				2D70688879A6C8BB61AE172332CCCDB9 /* Frameworks */,
+				3E68C17E686AB9E873EF5BF9FC04D507 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87D693E06E7BF0226BC8A8368BF5D37F /* PBXTargetDependency */,
+			);
+			name = Cent;
+			productName = Cent;
+			productReference = 15CD73BEF7349DC1BC971F40307977B0 /* Cent.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -460,8 +460,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				528AC879B1F683E3D592E273C7381D69 /* Cent */,
-				24D24EA4C3FB9DE12613D9F70F627A50 /* Dollar */,
+				B41455AE8173529180096B7B18DF9E18 /* Cent */,
+				4EED0DFBD51042A6474A614902B7E78C /* Dollar */,
 				76707C7216742F51DBC93867EB6E51E4 /* Pods-Futebol365 */,
 				66D005083813866908DDB895F347CD7B /* SwiftMoment */,
 			);
@@ -482,13 +482,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		11F30E9CBFFBBF907BB8D03AAB57F372 /* Sources */ = {
+		244AB34657C82560DF741F4D841A07F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C639741AE4EFB2E073217F8D5B1E8CC5 /* AutoCurry.swift in Sources */,
-				D699434AE0657C2A526B8C574D3A2251 /* Dollar-dummy.m in Sources */,
-				7FA0064BBB5AEB00CEE1960624C87ABF /* Dollar.swift in Sources */,
+				C7D78ECAD6E0C9E98182269849A4936D /* AutoCurry.swift in Sources */,
+				D584C776E1F37C192319D75B8A99FDA4 /* Dollar-dummy.m in Sources */,
+				6328573CD1B34B3D5028025E31F8C175 /* Dollar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		369276E6951DEFC141665A5663307108 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				875D1CC3F503F4A2CA1BBFC449A58605 /* Array.swift in Sources */,
+				F970D293B9A02BD5DDDE0A49B8544955 /* Cent-dummy.m in Sources */,
+				47E665C9CF9C2C0C21485EB323DCB33C /* Date.swift in Sources */,
+				A9D97E4EE3493815D4C14F9BE1727B38 /* Dictionary.swift in Sources */,
+				CB9966F53D5C097C6030A3AE4C3FF15D /* Int.swift in Sources */,
+				01B5DB1F3495B88E5EBD54410C0AB259 /* Range.swift in Sources */,
+				36CC00F4E3ED5833F62CC725B5C79FDA /* Regex.swift in Sources */,
+				94141C93F76CAAC60A13D5786D5FB2D6 /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,54 +515,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DBAF6AC7D99DFEE64C7AEB43BF90F608 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F439F741B7E2F9E4D5399C9669A74A7 /* Array.swift in Sources */,
-				79B2A0F63DA30A7D5398E079B3B015DF /* Cent-dummy.m in Sources */,
-				3BBB735B444E1FBDFADD8E7D0D85A57E /* Date.swift in Sources */,
-				9BE04564D0DA02BF40F90B8004CC4953 /* Dictionary.swift in Sources */,
-				AA22313B1182A49EE8D9DE9BD7111676 /* Int.swift in Sources */,
-				73FD6395491DF01060CC549122623AA0 /* Range.swift in Sources */,
-				EDBDC3C16E41B72B45CD3466C6147F91 /* Regex.swift in Sources */,
-				D1B9B01887BF603B3BD60A7EA7B83139 /* String.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4061A2D693828E897B86217820D17037 /* PBXTargetDependency */ = {
+		827D2541B77E32AAC142705C34BC7C04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Dollar;
+			target = 4EED0DFBD51042A6474A614902B7E78C /* Dollar */;
+			targetProxy = 48E7444750512A9F7650687BC72A5951 /* PBXContainerItemProxy */;
+		};
+		87867637A2BA62DD2E88F5D290B7F9B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftMoment;
 			target = 66D005083813866908DDB895F347CD7B /* SwiftMoment */;
-			targetProxy = E9142F884B4DE1B73C1B8D09CF629031 /* PBXContainerItemProxy */;
+			targetProxy = 01D8508075C8DF913967CE76E526F983 /* PBXContainerItemProxy */;
 		};
-		7F7B0849A43693D162D22647E615AF04 /* PBXTargetDependency */ = {
+		87D693E06E7BF0226BC8A8368BF5D37F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Dollar;
-			target = 24D24EA4C3FB9DE12613D9F70F627A50 /* Dollar */;
-			targetProxy = 1A8DC4A92937B35B827ECA63EE88E14F /* PBXContainerItemProxy */;
+			target = 4EED0DFBD51042A6474A614902B7E78C /* Dollar */;
+			targetProxy = CB58FC2F58265575116D4D760D2E4A12 /* PBXContainerItemProxy */;
 		};
-		8591221F93813D3E1EBC62722CC0BFF6 /* PBXTargetDependency */ = {
+		F9E5054A4414E8E51BBDE45047553722 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Cent;
-			target = 528AC879B1F683E3D592E273C7381D69 /* Cent */;
-			targetProxy = 06C65F61F062711879B5A4F320A19116 /* PBXContainerItemProxy */;
-		};
-		D9A313F2870A48E958845B0ED4EC7C89 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Dollar;
-			target = 24D24EA4C3FB9DE12613D9F70F627A50 /* Dollar */;
-			targetProxy = 0566F4250BBC98CB51396D032C3E379E /* PBXContainerItemProxy */;
+			target = B41455AE8173529180096B7B18DF9E18 /* Cent */;
+			targetProxy = FC57077B674CC412981AD156EF92CC95 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		177C6048EE4F0B22712AA15A057DF52F /* Release */ = {
+		00670EE260F5B669C83717D902A68C5F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 976AFADB247C31CC75E145F19A12CCC2 /* Cent-Private.xcconfig */;
+			baseConfigurationReference = 5DB909CB744D63FEA5554B19241A7CE6 /* Dollar-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 3.0.3;
@@ -556,14 +556,14 @@
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Cent/Cent-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cent/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Dollar/Dollar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Dollar/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cent/Cent.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Dollar/Dollar.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Cent;
+				PRODUCT_NAME = Dollar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -572,37 +572,9 @@
 			};
 			name = Release;
 		};
-		5B4AFA0E21B2644D31FB46F4B464F2C6 /* Debug */ = {
+		40AB2CE2217BBB538A76C49BECAFEEB4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 976AFADB247C31CC75E145F19A12CCC2 /* Cent-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3.0.3;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 3;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Cent/Cent-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cent/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cent/Cent.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Cent;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6E21748EA4DC82DD03A8A4E76B6C4E9E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EEEE14D8C002E5A9D1C84679949F113 /* Pods-Futebol365.release.xcconfig */;
+			baseConfigurationReference = B42FBCABBEA6F4CEC600DE58306BAEC6 /* Pods-Futebol365.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -613,7 +585,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Futebol365/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Pods-Futebol365/Pods-Futebol365.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -629,37 +601,9 @@
 			};
 			name = Release;
 		};
-		7205C0B63A73F9D8E544526595EA51CB /* Debug */ = {
+		41D6D56C163E68E7100D69B6F32D7480 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDFC33BBE00856A72EE1203FA48262C2 /* Dollar-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3.0.3;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 3;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Dollar/Dollar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Dollar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Dollar/Dollar.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Dollar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8C8D2B166B52884E309591027A519FA6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77A83F4216359D84489EBE0655868305 /* SwiftMoment-Private.xcconfig */;
+			baseConfigurationReference = 2E069B9026589B3F064C78F2CDF8C62A /* SwiftMoment-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.1.2;
@@ -671,7 +615,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftMoment/SwiftMoment-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftMoment/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftMoment/SwiftMoment.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -685,7 +629,34 @@
 			};
 			name = Debug;
 		};
-		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+		5A87DC6B7E696B3B6C7F48F173FCBEE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27EF45C30EAF7F79033210F4F955EC13 /* Cent-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 3.0.3;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 3;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cent/Cent-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cent/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cent/Cent.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Cent;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -717,98 +688,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		C842F7E1E4DA7950C588F785598FA3EC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77A83F4216359D84489EBE0655868305 /* SwiftMoment-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1.2;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.1.2;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftMoment/SwiftMoment-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftMoment/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftMoment/SwiftMoment.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftMoment;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CC37786D2250BC41A8CBFE6AF66DB2B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F750C19A46A208B1AE7BAD5DD6B0CAEC /* Pods-Futebol365.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Futebol365/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-Futebol365/Pods-Futebol365.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_Futebol365;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D5547709B07AB645D6F63C9C708D84E8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDFC33BBE00856A72EE1203FA48262C2 /* Dollar-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3.0.3;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 3;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Dollar/Dollar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Dollar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Dollar/Dollar.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Dollar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -835,12 +722,125 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		9813217B7BCCBE6FAAC4972D6B36CCFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0E1422758FB2415C40AEA20EB30E31C /* Pods-Futebol365.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Futebol365/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Futebol365/Pods-Futebol365.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Futebol365;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A3EA0058CE4AAB8EAD4598C8D04B1E64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E069B9026589B3F064C78F2CDF8C62A /* SwiftMoment-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.2;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.2;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftMoment/SwiftMoment-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftMoment/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftMoment/SwiftMoment.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftMoment;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BBD7D3DFFFD52FF0ACDDF36C2DE4A8BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27EF45C30EAF7F79033210F4F955EC13 /* Cent-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 3.0.3;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 3;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cent/Cent-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cent/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cent/Cent.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Cent;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C024EBED13CAB471922BFBB32815F06E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DB909CB744D63FEA5554B19241A7CE6 /* Dollar-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 3.0.3;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 3;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Dollar/Dollar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Dollar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Dollar/Dollar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Dollar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -848,17 +848,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
-				FB45FFD90572718D82AB9092B750F0CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		38A71B32409112F2777F2F0FF5B1B254 /* Build configuration list for PBXNativeTarget "Dollar" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7205C0B63A73F9D8E544526595EA51CB /* Debug */,
-				D5547709B07AB645D6F63C9C708D84E8 /* Release */,
+				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
+				74857149DC1E0D599B8A01A78349A926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -866,17 +857,26 @@
 		5CB0EC63CF1AD31A4F08F40157BA64AE /* Build configuration list for PBXNativeTarget "Pods-Futebol365" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC37786D2250BC41A8CBFE6AF66DB2B2 /* Debug */,
-				6E21748EA4DC82DD03A8A4E76B6C4E9E /* Release */,
+				9813217B7BCCBE6FAAC4972D6B36CCFF /* Debug */,
+				40AB2CE2217BBB538A76C49BECAFEEB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C8318A37B04ACC168EAEE98033FB00BC /* Build configuration list for PBXNativeTarget "Cent" */ = {
+		9D0B5E773D781C09E804070A2EAF46A0 /* Build configuration list for PBXNativeTarget "Cent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B4AFA0E21B2644D31FB46F4B464F2C6 /* Debug */,
-				177C6048EE4F0B22712AA15A057DF52F /* Release */,
+				BBD7D3DFFFD52FF0ACDDF36C2DE4A8BA /* Debug */,
+				5A87DC6B7E696B3B6C7F48F173FCBEE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB23504759680B8B0D7BAC2EEF7B4DEB /* Build configuration list for PBXNativeTarget "Dollar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C024EBED13CAB471922BFBB32815F06E /* Debug */,
+				00670EE260F5B669C83717D902A68C5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -884,8 +884,8 @@
 		FBACF6B23BEF0D5F68E51DD375C9D119 /* Build configuration list for PBXNativeTarget "SwiftMoment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C8D2B166B52884E309591027A519FA6 /* Debug */,
-				C842F7E1E4DA7950C588F785598FA3EC /* Release */,
+				41D6D56C163E68E7100D69B6F32D7480 /* Debug */,
+				A3EA0058CE4AAB8EAD4598C8D04B1E64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

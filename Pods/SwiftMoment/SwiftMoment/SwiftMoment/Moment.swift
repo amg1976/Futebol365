@@ -15,7 +15,7 @@ import Foundation
 Returns a moment representing the current instant in time
 at the current timezone.
 
-:returns: A Moment instance.
+- returns: A Moment instance.
 */
 public func moment(timeZone: NSTimeZone = NSTimeZone.defaultTimeZone()
     , locale: NSLocale = NSLocale.autoupdatingCurrentLocale()) -> Moment {
@@ -32,10 +32,10 @@ Returns an Optional wrapping a Moment structure, representing the
 current instant in time. If the string passed as parameter cannot be
 parsed by the function, the Optional wraps a nil value.
 
-:param: stringDate A string with a date representation.
-:param: timeZone   An NSTimeZone object
+- parameter stringDate: A string with a date representation.
+- parameter timeZone:   An NSTimeZone object
 
-:returns: An optional Moment instance.
+- returns: An optional Moment instance.
 */
 public func moment(stringDate: String
     , timeZone: NSTimeZone = NSTimeZone.defaultTimeZone()
@@ -95,10 +95,10 @@ public func moment(stringDate: String
 Builds a new Moment instance using an array with the following components,
 in the following order: [ year, month, day, hour, minute, second ]
 
-:param: dateComponents An array of integer values
-:param: timeZone   An NSTimeZone object
+- parameter dateComponents: An array of integer values
+- parameter timeZone:   An NSTimeZone object
 
-:returns: An optional wrapping a Moment instance
+- returns: An optional wrapping a Moment instance
 */
 public func moment(params: [Int]
     , timeZone: NSTimeZone = NSTimeZone.defaultTimeZone()
@@ -184,11 +184,11 @@ public func moment(moment: Moment) -> Moment {
 }
 
 public func past() -> Moment {
-    return Moment(date: NSDate.distantPast())
+    return Moment(date: NSDate.distantPast() )
 }
 
 public func future() -> Moment {
-    return Moment(date: NSDate.distantFuture())
+    return Moment(date: NSDate.distantFuture() )
 }
 
 public func since(past: Moment) -> Duration {
@@ -262,7 +262,7 @@ public struct Moment: Comparable {
     public var monthName: String {
         let formatter = NSDateFormatter()
         formatter.locale = locale
-        return formatter.monthSymbols[month - 1]
+        return formatter.monthSymbols[month - 1] 
     }
 
     public var day: Int {
@@ -355,6 +355,8 @@ public struct Moment: Comparable {
             return quarter
         case .Years:
             return year
+        default:
+            return nil
         }
     }
 
@@ -400,7 +402,8 @@ public struct Moment: Comparable {
         case .Seconds:
             components.second = value
         }
-        let cal = NSCalendar.currentCalendar()
+        let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        cal.timeZone = NSTimeZone(abbreviation: "UTC")!
         if let newDate = cal.dateByAddingComponents(components, toDate: date, options: NSCalendarOptions.init(rawValue: 0)) {
           return Moment(date: newDate)
         }
@@ -517,6 +520,8 @@ public struct Moment: Comparable {
             return value * 7776000 // 3 months
         case .Years:
             return value * 31536000 // 365 days
+        default:
+            return 0
         }
     }
 }
