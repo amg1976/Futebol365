@@ -9,9 +9,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>NextGameExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>207D13421BA4AA61001F4D1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>207D13571BA4BB9B001F4D1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>20B31ABE1B89DDD3002B5308</key>
 		<dict>
 			<key>primary</key>

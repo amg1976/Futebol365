@@ -11,6 +11,12 @@ import Parse
 import SwiftMoment
 import Cent
 
+extension Moment {
+   func date() -> NSDate {
+      return NSDate(timeIntervalSince1970: self.epoch())
+   }
+}
+
 class FPTGame: PFObject, PFSubclassing {
    
    //MARK: NSObject

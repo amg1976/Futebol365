@@ -9,6 +9,22 @@
 /* Begin PBXBuildFile section */
 		204E36641B8CFF7C00A063A3 /* FPTAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */; };
 		206CE90D1BA238CB003FBBEF /* FPTTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206CE90C1BA238CB003FBBEF /* FPTTeam.swift */; };
+		207D13451BA4AA61001F4D1B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207D13441BA4AA61001F4D1B /* NotificationCenter.framework */; settings = {ASSET_TAGS = (); }; };
+		207D13481BA4AA61001F4D1B /* NextGamesExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D13471BA4AA61001F4D1B /* NextGamesExtensionViewController.swift */; };
+		207D134B1BA4AA61001F4D1B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207D13491BA4AA61001F4D1B /* MainInterface.storyboard */; };
+		207D134F1BA4AA61001F4D1B /* NextGameExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 207D13431BA4AA61001F4D1B /* NextGameExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		207D13671BA4D5D9001F4D1B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31B091B8A18CF002B5308 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		207D13681BA4D5D9001F4D1B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31B0A1B8A18CF002B5308 /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		207D13691BA4D5D9001F4D1B /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31B0B1B8A18CF002B5308 /* ParseCrashReporting.framework */; settings = {ASSET_TAGS = (); }; };
+		207D136A1BA4D5D9001F4D1B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31B0C1B8A18CF002B5308 /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
+		207D136B1BA4D65A001F4D1B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31B071B8A187C002B5308 /* AudioToolbox.framework */; };
+		207D136D1BA4D662001F4D1B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 207D136C1BA4D662001F4D1B /* libsqlite3.tbd */; };
+		207D136E1BA4D66D001F4D1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31AF41B89EA60002B5308 /* SystemConfiguration.framework */; };
+		207D136F1BA4D6AC001F4D1B /* FPTTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206CE90C1BA238CB003FBBEF /* FPTTeam.swift */; settings = {ASSET_TAGS = (); }; };
+		207D13701BA4D6AC001F4D1B /* FPTGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B31B051B8A177E002B5308 /* FPTGame.swift */; settings = {ASSET_TAGS = (); }; };
+		207D13721BA4D6F1001F4D1B /* SwiftMoment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207D13711BA4D6F1001F4D1B /* SwiftMoment.framework */; };
+		207D13751BA4E487001F4D1B /* Cent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207D13731BA4E487001F4D1B /* Cent.framework */; };
+		207D13761BA4E487001F4D1B /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207D13741BA4E487001F4D1B /* Dollar.framework */; };
 		2090E2971B8D188900C8BE48 /* FPTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2090E2961B8D188900C8BE48 /* FPTConstants.swift */; };
 		20B31ACA1B89DDD3002B5308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B31AC81B89DDD3002B5308 /* Main.storyboard */; };
 		20B31ACC1B89DDD3002B5308 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B31ACB1B89DDD3002B5308 /* Images.xcassets */; };
@@ -30,6 +46,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		207D134D1BA4AA61001F4D1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20B31AB71B89DDD3002B5308 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 207D13421BA4AA61001F4D1B;
+			remoteInfo = NextGameExtension;
+		};
 		20B31AD51B89DDD3002B5308 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 20B31AB71B89DDD3002B5308 /* Project object */;
@@ -39,9 +62,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		207D13531BA4AA61001F4D1B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				207D134F1BA4AA61001F4D1B /* NextGameExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTAppConfiguration.swift; sourceTree = "<group>"; };
 		206CE90C1BA238CB003FBBEF /* FPTTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTTeam.swift; sourceTree = "<group>"; };
+		207D13431BA4AA61001F4D1B /* NextGameExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NextGameExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		207D13441BA4AA61001F4D1B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		207D13471BA4AA61001F4D1B /* NextGamesExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextGamesExtensionViewController.swift; sourceTree = "<group>"; };
+		207D134A1BA4AA61001F4D1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		207D134C1BA4AA61001F4D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207D136C1BA4D662001F4D1B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		207D13711BA4D6F1001F4D1B /* SwiftMoment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMoment.framework; path = "Pods/../build/Debug-iphoneos/SwiftMoment.framework"; sourceTree = "<group>"; };
+		207D13731BA4E487001F4D1B /* Cent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cent.framework; path = "Pods/../build/Debug-iphoneos/Cent.framework"; sourceTree = "<group>"; };
+		207D13741BA4E487001F4D1B /* Dollar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dollar.framework; path = "Pods/../build/Debug-iphoneos/Dollar.framework"; sourceTree = "<group>"; };
 		2090E2961B8D188900C8BE48 /* FPTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTConstants.swift; sourceTree = "<group>"; };
 		20B31ABF1B89DDD3002B5308 /* Futebol365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futebol365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B31AC31B89DDD3002B5308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +116,24 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		207D13401BA4AA61001F4D1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207D13751BA4E487001F4D1B /* Cent.framework in Frameworks */,
+				207D13761BA4E487001F4D1B /* Dollar.framework in Frameworks */,
+				207D13721BA4D6F1001F4D1B /* SwiftMoment.framework in Frameworks */,
+				207D136E1BA4D66D001F4D1B /* SystemConfiguration.framework in Frameworks */,
+				207D136D1BA4D662001F4D1B /* libsqlite3.tbd in Frameworks */,
+				207D136B1BA4D65A001F4D1B /* AudioToolbox.framework in Frameworks */,
+				207D13451BA4AA61001F4D1B /* NotificationCenter.framework in Frameworks */,
+				207D13681BA4D5D9001F4D1B /* Parse.framework in Frameworks */,
+				207D136A1BA4D5D9001F4D1B /* ParseUI.framework in Frameworks */,
+				207D13671BA4D5D9001F4D1B /* Bolts.framework in Frameworks */,
+				207D13691BA4D5D9001F4D1B /* ParseCrashReporting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20B31ABC1B89DDD3002B5308 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,10 +177,21 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		207D13461BA4AA61001F4D1B /* NextGameExtension */ = {
+			isa = PBXGroup;
+			children = (
+				207D13471BA4AA61001F4D1B /* NextGamesExtensionViewController.swift */,
+				207D13491BA4AA61001F4D1B /* MainInterface.storyboard */,
+				207D134C1BA4AA61001F4D1B /* Info.plist */,
+			);
+			path = NextGameExtension;
+			sourceTree = "<group>";
+		};
 		20B31AB61B89DDD3002B5308 = {
 			isa = PBXGroup;
 			children = (
 				20B31AFA1B89EAB3002B5308 /* Frameworks */,
+				207D13461BA4AA61001F4D1B /* NextGameExtension */,
 				20B31AC11B89DDD3002B5308 /* Futebol365 */,
 				20B31AD71B89DDD3002B5308 /* Futebol365Tests */,
 				20B31AC01B89DDD3002B5308 /* Products */,
@@ -129,6 +204,7 @@
 			children = (
 				20B31ABF1B89DDD3002B5308 /* Futebol365.app */,
 				20B31AD41B89DDD3002B5308 /* Futebol365Tests.xctest */,
+				207D13431BA4AA61001F4D1B /* NextGameExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,11 +270,16 @@
 		20B31AFA1B89EAB3002B5308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				207D13731BA4E487001F4D1B /* Cent.framework */,
+				207D13741BA4E487001F4D1B /* Dollar.framework */,
+				207D13711BA4D6F1001F4D1B /* SwiftMoment.framework */,
+				207D136C1BA4D662001F4D1B /* libsqlite3.tbd */,
 				20B31B071B8A187C002B5308 /* AudioToolbox.framework */,
 				20B31AF81B89EA78002B5308 /* libstdc++.6.dylib */,
 				20B31AF61B89EA70002B5308 /* libsqlite3.dylib */,
 				20B31AF41B89EA60002B5308 /* SystemConfiguration.framework */,
 				E94CC59F61A4EBEF823968E3 /* Pods_Futebol365.framework */,
+				207D13441BA4AA61001F4D1B /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,6 +325,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		207D13421BA4AA61001F4D1B /* NextGameExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 207D13521BA4AA61001F4D1B /* Build configuration list for PBXNativeTarget "NextGameExtension" */;
+			buildPhases = (
+				207D133F1BA4AA61001F4D1B /* Sources */,
+				207D13401BA4AA61001F4D1B /* Frameworks */,
+				207D13411BA4AA61001F4D1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NextGameExtension;
+			productName = NextGameExtension;
+			productReference = 207D13431BA4AA61001F4D1B /* NextGameExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		20B31ABE1B89DDD3002B5308 /* Futebol365 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20B31ADE1B89DDD3002B5308 /* Build configuration list for PBXNativeTarget "Futebol365" */;
@@ -254,10 +352,12 @@
 				20B31ABD1B89DDD3002B5308 /* Resources */,
 				EB069F947A4449A2FB486FE3 /* Embed Pods Frameworks */,
 				CEBF4105F2E4982A2B27780D /* Copy Pods Resources */,
+				207D13531BA4AA61001F4D1B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				207D134E1BA4AA61001F4D1B /* PBXTargetDependency */,
 			);
 			name = Futebol365;
 			productName = Futebol365;
@@ -292,6 +392,10 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Adriano Goncalves";
 				TargetAttributes = {
+					207D13421BA4AA61001F4D1B = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = M65H29N762;
+					};
 					20B31ABE1B89DDD3002B5308 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = M65H29N762;
@@ -317,11 +421,20 @@
 			targets = (
 				20B31ABE1B89DDD3002B5308 /* Futebol365 */,
 				20B31AD31B89DDD3002B5308 /* Futebol365Tests */,
+				207D13421BA4AA61001F4D1B /* NextGameExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		207D13411BA4AA61001F4D1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207D134B1BA4AA61001F4D1B /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20B31ABD1B89DDD3002B5308 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,6 +503,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		207D133F1BA4AA61001F4D1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207D13481BA4AA61001F4D1B /* NextGamesExtensionViewController.swift in Sources */,
+				207D136F1BA4D6AC001F4D1B /* FPTTeam.swift in Sources */,
+				207D13701BA4D6AC001F4D1B /* FPTGame.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20B31ABB1B89DDD3002B5308 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -415,6 +538,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		207D134E1BA4AA61001F4D1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 207D13421BA4AA61001F4D1B /* NextGameExtension */;
+			targetProxy = 207D134D1BA4AA61001F4D1B /* PBXContainerItemProxy */;
+		};
 		20B31AD61B89DDD3002B5308 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 20B31ABE1B89DDD3002B5308 /* Futebol365 */;
@@ -423,6 +551,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		207D13491BA4AA61001F4D1B /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				207D134A1BA4AA61001F4D1B /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		20B31AC81B89DDD3002B5308 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,6 +578,43 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		207D13501BA4AA61001F4D1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Futebol365/External/Parse",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = NextGameExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amg.Futebol365.NextGameExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		207D13511BA4AA61001F4D1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Futebol365/External/Parse",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = NextGameExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amg.Futebol365.NextGameExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		20B31ADC1B89DDD3002B5308 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -530,6 +703,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -549,6 +723,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -601,6 +776,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		207D13521BA4AA61001F4D1B /* Build configuration list for PBXNativeTarget "NextGameExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207D13501BA4AA61001F4D1B /* Debug */,
+				207D13511BA4AA61001F4D1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		20B31ABA1B89DDD3002B5308 /* Build configuration list for PBXProject "Futebol365" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

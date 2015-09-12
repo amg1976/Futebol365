@@ -29,9 +29,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    }
    
 }
-
-extension Moment {
-   func date() -> NSDate {
-      return NSDate(timeIntervalSince1970: self.epoch())
-   }
-}
