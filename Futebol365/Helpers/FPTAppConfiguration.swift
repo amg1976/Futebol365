@@ -13,16 +13,4 @@ class FPTAppConfiguration {
 
     static let sharedInstance: FPTAppConfiguration = FPTAppConfiguration()
 
-    var lastGamesUpdate: Moment {
-        set {
-            NSUserDefaults.standardUserDefaults().setObject(NSNumber(double: newValue.epoch()), forKey: "lastGamesUpdate")
-        }
-        get {
-            if let timeInterval = NSUserDefaults.standardUserDefaults().objectForKey("lastGamesUpdate") as? NSNumber {
-                let result = moment(timeInterval.doubleValue)
-                return result
-            }
-            return moment(NSTimeIntervalSince1970)
-        }
-    }
 }

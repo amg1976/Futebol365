@@ -1,4 +1,4 @@
-//
+  //
 //  TvGamesViewController.swift
 //  Futebol365
 //
@@ -27,11 +27,22 @@ class TvGamesTableViewCell: UITableViewCell {
    
    func updateStyle() {
       if let gameItem = item {
-         if moment().intervalSince(moment(gameItem.date)).days > 0 {
-            teams.textColor = UIColor.lightGrayColor()
-            time.textColor = UIColor.lightGrayColor()
-            channelName.textColor = UIColor.lightGrayColor()
+         let timeSinceGameStart = moment().intervalSince(gameItem.dateMoment)
+         if timeSinceGameStart.seconds > 0 {
+            if timeSinceGameStart.minutes <= 120 {
+               let green = UIColor(red: 0, green: 128/255, blue: 0, alpha: 1)
+               teams.font = UIFont.systemFontOfSize(teams.font.pointSize, weight: UIFontWeightLight)
+               teams.textColor = green
+               time.textColor = green
+               channelName.textColor = green
+            } else {
+               teams.font = UIFont.systemFontOfSize(teams.font.pointSize, weight: UIFontWeightThin)
+               teams.textColor = UIColor.lightGrayColor()
+               time.textColor = UIColor.lightGrayColor()
+               channelName.textColor = UIColor.lightGrayColor()
+            }
          } else {
+            teams.font = UIFont.systemFontOfSize(teams.font.pointSize, weight: UIFontWeightLight)
             teams.textColor = UIColor.darkGrayColor()
             time.textColor = UIColor.darkGrayColor()
             channelName.textColor = UIColor.darkGrayColor()
@@ -90,7 +101,7 @@ class TvGamesTableDelegate: NSObject, UITableViewDelegate {
       
       if let tableCell = cell as? TvGamesTableViewCell {
          tableCell.teams.text = "\(tableCell.item!.homeTeamName) - \(tableCell.item!.awayTeamName)"
-         tableCell.time.text = moment(tableCell.item!.date).format("HH:mm")
+         tableCell.time.text = tableCell.item!.dateMoment.format("HH:mm")
          tableCell.channelName.text = tableCell.item?.tvChannel
          tableCell.updateStyle()
       }
@@ -132,11 +143,10 @@ class TvGamesDataSource {
       allDates.sortInPlace { (date1, date2) -> Bool in
          return (date1 as! NSDate).timeIntervalSince1970 < (date2 as! NSDate).timeIntervalSince1970
       }
-      print(allDates)
       allItems = allDates.map({ (date) -> TvGamesDataSourceItem in
          let newItem = TvGamesDataSourceItem(date: moment(date as! NSDate), items: self.allGames.filter({ (game) -> Bool in
             let currentDate = moment(date as! NSDate)
-            return moment(game.date) >= currentDate.startOf(.Days) && moment(game.date) < currentDate.endOf(.Days)
+            return game.dateMoment >= currentDate.startOf(.Days) && game.dateMoment < currentDate.endOf(.Days)
          }))
          return newItem
       })

@@ -42,6 +42,9 @@ class FPTGame: PFObject, PFSubclassing {
    @NSManaged var awayTeam: FPTTeam
    @NSManaged var awayTeamName: String
    @NSManaged var date: NSDate
+   var dateMoment: Moment {
+      return moment(date)
+   }
    
    override init() {
       super.init()
