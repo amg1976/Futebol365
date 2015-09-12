@@ -64,12 +64,12 @@ public struct Duration: Equatable {
     }
 }
 
-extension Duration: Printable {
+extension Duration: CustomStringConvertible {
     public var description: String {
         let formatter = NSDateComponentsFormatter()
-        formatter.allowedUnits = .CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitWeekOfMonth | .CalendarUnitDay | .CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond
+        formatter.allowedUnits = [NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second, NSCalendarUnit.WeekOfMonth]
 
-        let referenceDate = NSDate(timeIntervalSinceReferenceDate: 0)
+      let referenceDate = NSDate(timeIntervalSinceReferenceDate: 0)
         let intervalDate = NSDate(timeInterval: self.interval, sinceDate: referenceDate)
         return formatter.stringFromDate(referenceDate, toDate: intervalDate)!
     }
