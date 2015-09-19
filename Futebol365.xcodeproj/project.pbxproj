@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		204661571BAE07A800B47003 /* FPTFavouriteTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204661561BAE07A800B47003 /* FPTFavouriteTeam.swift */; settings = {ASSET_TAGS = (); }; };
+		204661591BAE07A800B47003 /* FPTFavouriteTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204661561BAE07A800B47003 /* FPTFavouriteTeam.swift */; settings = {ASSET_TAGS = (); }; };
 		204E36641B8CFF7C00A063A3 /* FPTAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */; };
+		2062E4141BAD77A400E4B0B4 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 2062E4131BAD77A400E4B0B4 /* TODO */; settings = {ASSET_TAGS = (); }; };
 		206CE90D1BA238CB003FBBEF /* FPTTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206CE90C1BA238CB003FBBEF /* FPTTeam.swift */; };
 		207D13451BA4AA61001F4D1B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207D13441BA4AA61001F4D1B /* NotificationCenter.framework */; settings = {ASSET_TAGS = (); }; };
 		207D13481BA4AA61001F4D1B /* NextGamesExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D13471BA4AA61001F4D1B /* NextGamesExtensionViewController.swift */; };
@@ -77,7 +80,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		204661561BAE07A800B47003 /* FPTFavouriteTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTFavouriteTeam.swift; sourceTree = "<group>"; };
 		204E36631B8CFF7C00A063A3 /* FPTAppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTAppConfiguration.swift; sourceTree = "<group>"; };
+		2062E4131BAD77A400E4B0B4 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		206CE90C1BA238CB003FBBEF /* FPTTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FPTTeam.swift; sourceTree = "<group>"; };
 		207D13431BA4AA61001F4D1B /* NextGameExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NextGameExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		207D13441BA4AA61001F4D1B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -190,6 +195,7 @@
 		20B31AB61B89DDD3002B5308 = {
 			isa = PBXGroup;
 			children = (
+				2062E4131BAD77A400E4B0B4 /* TODO */,
 				20B31AFA1B89EAB3002B5308 /* Frameworks */,
 				207D13461BA4AA61001F4D1B /* NextGameExtension */,
 				20B31AC11B89DDD3002B5308 /* Futebol365 */,
@@ -307,8 +313,9 @@
 		20B31B041B8A1661002B5308 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				206CE90C1BA238CB003FBBEF /* FPTTeam.swift */,
+				204661561BAE07A800B47003 /* FPTFavouriteTeam.swift */,
 				20B31B051B8A177E002B5308 /* FPTGame.swift */,
+				206CE90C1BA238CB003FBBEF /* FPTTeam.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -441,6 +448,7 @@
 			files = (
 				20B31ACA1B89DDD3002B5308 /* Main.storyboard in Resources */,
 				20B31ACF1B89DDD3002B5308 /* LaunchScreen.xib in Resources */,
+				2062E4141BAD77A400E4B0B4 /* TODO in Resources */,
 				20B31ACC1B89DDD3002B5308 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +518,7 @@
 				207D13481BA4AA61001F4D1B /* NextGamesExtensionViewController.swift in Sources */,
 				207D136F1BA4D6AC001F4D1B /* FPTTeam.swift in Sources */,
 				207D13701BA4D6AC001F4D1B /* FPTGame.swift in Sources */,
+				204661591BAE07A800B47003 /* FPTFavouriteTeam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +533,7 @@
 				20B31B031B8A1648002B5308 /* TvGamesViewController.swift in Sources */,
 				204E36641B8CFF7C00A063A3 /* FPTAppConfiguration.swift in Sources */,
 				2090E2971B8D188900C8BE48 /* FPTConstants.swift in Sources */,
+				204661571BAE07A800B47003 /* FPTFavouriteTeam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,6 +793,7 @@
 				207D13511BA4AA61001F4D1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20B31ABA1B89DDD3002B5308 /* Build configuration list for PBXProject "Futebol365" */ = {
 			isa = XCConfigurationList;

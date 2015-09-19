@@ -24,8 +24,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       ParseCrashReporting.enable()
       Parse.setApplicationId("0N1kCdAA5d2A7vMyrEqJON06vZVfjp4z5NSgjNzD", clientKey: "oHQ9MeJ64rJoFdQgqqbfiJSB12qXBrBhsjTiTu8y")
       
+      let currentUser = PFUser.currentUser()
+      if currentUser != nil {
+         // Do stuff with the user
+      } else {
+         let user = PFUser()
+         user.username = "amg1976"
+         user.password = "amg1976"
+         user.email = "amg1976@gmail.com"
+         PFUser.logInWithUsernameInBackground(user.username!, password:user.password!) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if user != nil {
+               print("user logged in")
+            } else {
+               self.dummySignup(user!)
+            }
+         }
+      }      
+      
       return true
       
+   }
+   
+   func dummySignup(user: PFUser) {
+      user.signUpInBackgroundWithBlock {
+         (succeeded: Bool, error: NSError?) -> Void in
+         if let error = error {
+            if let errorString = error.userInfo["error"] as? NSString {
+               print("error on signup: \(errorString)")
+            }
+         } else {
+         }
+      }
    }
    
 }
