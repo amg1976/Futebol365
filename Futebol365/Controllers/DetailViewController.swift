@@ -9,6 +9,23 @@
 import UIKit
 import Parse
 
+let FPTUserErrorDomain = "com.amg.Futebol365.PFUser"
+enum FPTUserErrorCode: Int {
+   case MissingLoggedInUser = 0
+}
+
+extension PFUser {
+   static func getCurrentUserFavourites(onCompletion: PFArrayResultBlock) {
+      if let user = PFUser.currentUser() {
+         let query = PFQuery(className: FPTFavouriteTeam.parseClassName())
+         query.whereKey("user", equalTo: user)
+         query.findObjectsInBackgroundWithBlock(onCompletion)
+      } else {
+         onCompletion(nil, NSError(domain: FPTUserErrorDomain, code: FPTUserErrorCode.MissingLoggedInUser.rawValue, userInfo: nil))
+      }
+   }
+}
+
 class DetailViewController: UIViewController {
    
    @IBOutlet weak var homeTeam: UILabel!
@@ -27,30 +44,26 @@ class DetailViewController: UIViewController {
       homeTeam.text = item.homeTeamName
       awayTeam.text = item.awayTeamName
       
-      if let user = PFUser.currentUser() {
-         let query = PFQuery(className: FPTFavouriteTeam.parseClassName())
-         query.whereKey("user", equalTo: user)
-         query.findObjectsInBackgroundWithBlock({ (results, error) -> Void in
-            if error == nil {
-               if let allFavourites = results as? [FPTFavouriteTeam] {
-                  if allFavourites.count > 0 {
-                     self.favourites = results as! [FPTFavouriteTeam]
-                     for favourite in allFavourites {
-                        if favourite.team == self.item.homeTeam {
-                           self.homeTeamFavourite.setOn(true, animated: true)
-                        }
-                        if favourite.team == self.item.awayTeam {
-                           self.awayTeamFavourite.setOn(true, animated: true)
-                        }
+      PFUser.getCurrentUserFavourites { (results, error) -> Void in
+         if error == nil {
+            if let allFavourites = results as? [FPTFavouriteTeam] {
+               if allFavourites.count > 0 {
+                  self.favourites = results as! [FPTFavouriteTeam]
+                  for favourite in allFavourites {
+                     if favourite.team == self.item.homeTeam {
+                        self.homeTeamFavourite.setOn(true, animated: true)
+                     }
+                     if favourite.team == self.item.awayTeam {
+                        self.awayTeamFavourite.setOn(true, animated: true)
                      }
                   }
                }
-            } else {
-               
             }
-         })
-      } else {
-         showError("No user logged in")
+         } else if error?.code == FPTUserErrorCode.MissingLoggedInUser.rawValue {
+            self.showError("No user logged in")
+         } else {
+            self.showError("Unknown error")
+         }
       }
       
    }
@@ -88,9 +101,7 @@ class DetailViewController: UIViewController {
          let newFavourite = FPTFavouriteTeam(className: FPTFavouriteTeam.parseClassName())
          newFavourite.team = team
          newFavourite.user = user
-         newFavourite.saveInBackgroundWithBlock({ (result, error) -> Void in
-            print(error)
-         })
+         newFavourite.saveEventually()
          favourites.append(newFavourite)
       }
    }
@@ -98,9 +109,7 @@ class DetailViewController: UIViewController {
    private func removeFavourite(team: FPTTeam) {
       for (index,favourite) in favourites.enumerate() {
          if favourite.team == team {
-            favourite.deleteInBackgroundWithBlock({ (result, error) -> Void in
-               print(error)
-            })
+            favourite.deleteEventually()
             favourites.removeAtIndex(index)
             break
          }
