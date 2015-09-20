@@ -45,8 +45,10 @@ class FPTGame: PFObject, PFSubclassing {
    @NSManaged var tvChannel: String
    @NSManaged var homeTeam: FPTTeam
    @NSManaged var homeTeamName: String
+   var homeTeamCurrentUserFavourite = false
    @NSManaged var awayTeam: FPTTeam
    @NSManaged var awayTeamName: String
+   var awayTeamCurrentUserFavourite = false
    @NSManaged var date: NSDate
    var dateMoment: Moment {
       return moment(date)

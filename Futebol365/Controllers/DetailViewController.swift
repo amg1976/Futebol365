@@ -9,23 +9,6 @@
 import UIKit
 import Parse
 
-let FPTUserErrorDomain = "com.amg.Futebol365.PFUser"
-enum FPTUserErrorCode: Int {
-   case MissingLoggedInUser = 0
-}
-
-extension PFUser {
-   static func getCurrentUserFavourites(onCompletion: PFArrayResultBlock) {
-      if let user = PFUser.currentUser() {
-         let query = PFQuery(className: FPTFavouriteTeam.parseClassName())
-         query.whereKey("user", equalTo: user)
-         query.findObjectsInBackgroundWithBlock(onCompletion)
-      } else {
-         onCompletion(nil, NSError(domain: FPTUserErrorDomain, code: FPTUserErrorCode.MissingLoggedInUser.rawValue, userInfo: nil))
-      }
-   }
-}
-
 class DetailViewController: UIViewController {
    
    @IBOutlet weak var homeTeam: UILabel!
@@ -59,7 +42,7 @@ class DetailViewController: UIViewController {
                   }
                }
             }
-         } else if error?.code == FPTUserErrorCode.MissingLoggedInUser.rawValue {
+         } else if error?.code == FPTConstants.Error.UserErrorCode.MissingLoggedInUser.rawValue {
             self.showError("No user logged in")
          } else {
             self.showError("Unknown error")
@@ -91,8 +74,7 @@ class DetailViewController: UIViewController {
    private func showError(message: String) {
       homeTeamFavourite.enabled = false
       awayTeamFavourite.enabled = false
-      let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-      alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { (action) -> Void in }))
+      let alert = UIAlertController.showError(message)
       self.presentViewController(alert, animated: true, completion: nil)
    }
    
@@ -103,6 +85,7 @@ class DetailViewController: UIViewController {
          newFavourite.user = user
          newFavourite.saveEventually()
          favourites.append(newFavourite)
+         notifyUserFavouritesChanged()
       }
    }
    
@@ -111,9 +94,14 @@ class DetailViewController: UIViewController {
          if favourite.team == team {
             favourite.deleteEventually()
             favourites.removeAtIndex(index)
+            notifyUserFavouritesChanged()
             break
          }
       }
+   }
+   
+   private func notifyUserFavouritesChanged() {
+      NSNotificationCenter.defaultCenter().postNotificationName(FPTConstants.Notifications.FavouritesUpdatedNotification, object: self)
    }
    
 }

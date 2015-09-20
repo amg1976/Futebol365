@@ -9,9 +9,20 @@
 import UIKit
 
 class FPTConstants {
+
+   class Error {
+
+      static let UserErrorDomain = "com.amg.Futebol365.PFUser"
+      
+      enum UserErrorCode: Int {
+         case MissingLoggedInUser = 0
+      }
+
+   }
    
    class Notifications {
-      static let gamesDataSourceUpdatedNotification = "gamesDataSourceUpdatedNotification"
+      static let GamesDataSourceUpdatedNotification = "com.amg.Futebol365.GamesDataSourceUpdatedNotification"
+      static let FavouritesUpdatedNotification = "com.amg.Futebol365.FavouritesUpdatedNotification"
    }
 
 }

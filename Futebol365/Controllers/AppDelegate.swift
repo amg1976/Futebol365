@@ -59,3 +59,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    }
    
 }
+
+extension UIAlertController {
+   static func showError(message: String) -> UIAlertController {
+      let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+      alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { (action) -> Void in }))
+      return alert
+   }
+}

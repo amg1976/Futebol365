@@ -62,7 +62,7 @@ class TvGamesTableDataSource: NSObject, UITableViewDataSource {
    
    override init() {
       super.init()
-      notificationObserver = NSNotificationCenter.defaultCenter().addObserverForName(FPTConstants.Notifications.gamesDataSourceUpdatedNotification, object: nil, queue: nil) { (notification) -> Void in
+      notificationObserver = NSNotificationCenter.defaultCenter().addObserverForName(FPTConstants.Notifications.GamesDataSourceUpdatedNotification, object: nil, queue: nil) { (notification) -> Void in
          if let gamesDataSource = notification.object as? TvGamesDataSource {
             self.allItems = gamesDataSource.allItems
          }
@@ -100,7 +100,9 @@ class TvGamesTableDelegate: NSObject, UITableViewDelegate {
    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
       
       if let tableCell = cell as? TvGamesTableViewCell {
-         tableCell.teams.text = "\(tableCell.item!.homeTeamName) - \(tableCell.item!.awayTeamName)"
+         let homeTeamName = tableCell.item!.homeTeamName + (tableCell.item!.homeTeamCurrentUserFavourite ? " *" : "")
+         let awayTeamName = tableCell.item!.awayTeamName + (tableCell.item!.awayTeamCurrentUserFavourite ? " *" : "")
+         tableCell.teams.text = "\(homeTeamName) - \(awayTeamName)"
          tableCell.time.text = tableCell.item!.dateMoment.format("HH:mm")
          tableCell.channelName.text = tableCell.item?.tvChannel
          tableCell.updateStyle()
@@ -136,9 +138,16 @@ struct TvGamesDataSourceItem {
 class TvGamesDataSource {
    
    private var allGames: [FPTGame] = []
+   private var favourites: [FPTFavouriteTeam] = []
    private (set) var allItems: [TvGamesDataSourceItem] = []
    
    private func loadDataSourceItems() {
+      allGames = allGames.map({
+         let currentGame = $0
+         currentGame.homeTeamCurrentUserFavourite = (self.favourites.filter({ $0.team == currentGame.homeTeam }).count == 1)
+         currentGame.awayTeamCurrentUserFavourite = (self.favourites.filter({ $0.team == currentGame.awayTeam }).count == 1)
+         return currentGame
+      })
       var allDates = NSSet(array: allGames.map({ return moment($0.date).startOf(.Days).date() })).allObjects
       allDates.sortInPlace { (date1, date2) -> Bool in
          return (date1 as! NSDate).timeIntervalSince1970 < (date2 as! NSDate).timeIntervalSince1970
@@ -150,20 +159,24 @@ class TvGamesDataSource {
          }))
          return newItem
       })
-      NSNotificationCenter.defaultCenter().postNotificationName(FPTConstants.Notifications.gamesDataSourceUpdatedNotification, object: self)
+      NSNotificationCenter.defaultCenter().postNotificationName(FPTConstants.Notifications.GamesDataSourceUpdatedNotification, object: self)
    }
    
    func loadGames() {
-      
-      let query = PFQuery(className: FPTGame.parseClassName())
-      query.whereKey("date", greaterThan: moment().startOf(.Days).date())
-      query.orderByAscending("date")
-      query.findObjectsInBackgroundWithBlock { (items, error) -> Void in
-         if error == nil {
-            self.allGames = items as! [FPTGame]
-            self.loadDataSourceItems()
-         } else {
-            print("error getting items from local storage: \(error)")
+      PFUser.getCurrentUserFavourites { (favourites, favouritesError) -> Void in
+         if favouritesError == nil {
+            self.favourites = favourites as! [FPTFavouriteTeam]
+            let query = PFQuery(className: FPTGame.parseClassName())
+            query.whereKey("date", greaterThan: moment().startOf(.Days).date())
+            query.orderByAscending("date")
+            query.findObjectsInBackgroundWithBlock { (games, gamesError) -> Void in
+               if gamesError == nil {
+                  self.allGames = games as! [FPTGame]
+                  self.loadDataSourceItems()
+               } else {
+                  print("error getting items from local storage: \(gamesError)")
+               }
+            }
          }
       }
       
@@ -177,6 +190,8 @@ class TvGamesViewController: UIViewController, NSURLConnectionDataDelegate {
    private let tableDataSource = TvGamesTableDataSource()
    private let tableDelegate = TvGamesTableDelegate()
    private var notificationObserver: NSObjectProtocol?
+   private var favouritesObserver: NSObjectProtocol?
+   private var shouldReloadData = false
    
    @IBOutlet var tableView: UITableView!
    
@@ -192,12 +207,23 @@ class TvGamesViewController: UIViewController, NSURLConnectionDataDelegate {
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      notificationObserver = NSNotificationCenter.defaultCenter().addObserverForName(FPTConstants.Notifications.gamesDataSourceUpdatedNotification, object: gamesDataSource, queue: nil, usingBlock: { (notification) -> Void in
+      notificationObserver = NSNotificationCenter.defaultCenter().addObserverForName(FPTConstants.Notifications.GamesDataSourceUpdatedNotification, object: gamesDataSource, queue: nil, usingBlock: { (notification) -> Void in
          self.tableView.reloadData()
+      })
+      favouritesObserver = NSNotificationCenter.defaultCenter().addObserverForName(FPTConstants.Notifications.FavouritesUpdatedNotification, object: nil, queue: nil, usingBlock: { (notification) -> Void in
+         self.shouldReloadData = true
       })
       tableView.dataSource = tableDataSource
       tableView.delegate = tableDelegate
       gamesDataSource.loadGames()
+   }
+   
+   override func viewWillAppear(animated: Bool) {
+      super.viewWillAppear(animated)
+      if shouldReloadData {
+         gamesDataSource.loadGames()
+         shouldReloadData = false
+      }
    }
    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -110,7 +110,7 @@ class NextGamesExtensionViewController: UIViewController, UITableViewDataSource,
             print("error getting items from local storage: \(error)")
          }
       }
-   
+
    }
    
 }

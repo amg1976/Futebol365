@@ -34,3 +34,16 @@ class FPTFavouriteTeam: PFObject, PFSubclassing {
    @NSManaged var user: PFUser
 
 }
+
+extension PFUser {
+   static func getCurrentUserFavourites(onCompletion: PFArrayResultBlock) {
+      if let user = PFUser.currentUser() {
+         let query = PFQuery(className: FPTFavouriteTeam.parseClassName())
+         query.whereKey("user", equalTo: user)
+         query.findObjectsInBackgroundWithBlock(onCompletion)
+      } else {
+         onCompletion(nil, NSError(domain: FPTConstants.Error.UserErrorDomain, code: FPTConstants.Error.UserErrorCode.MissingLoggedInUser.rawValue, userInfo: nil))
+      }
+   }
+}
+   
