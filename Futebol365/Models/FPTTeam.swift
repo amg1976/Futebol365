@@ -32,4 +32,8 @@ class FPTTeam: PFObject, PFSubclassing {
    
    @NSManaged var name: String
    
+   override init() {
+      super.init()
+   }
+   
 }

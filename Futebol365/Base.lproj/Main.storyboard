@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7GT-ZB-6bP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7GT-ZB-6bP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -19,6 +19,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="I6E-4Y-Bqb">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TvGamesCellIdentifier" id="6CA-qi-VIx" customClass="TvGamesTableViewCell" customModule="Futebol365" customModuleProvider="target">
@@ -30,6 +31,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPORTTV.5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoQ-TU-x3X">
                                                     <rect key="frame" x="8" y="8.5" width="60" height="14.5"/>
+                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="IY6-gv-9Pc"/>
                                                         <constraint firstAttribute="height" constant="15" id="fRD-0r-izk"/>
@@ -40,6 +42,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUY-zH-f0b">
                                                     <rect key="frame" x="8" y="20.5" width="60" height="14.5"/>
+                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="JbT-7g-bfT"/>
                                                         <constraint firstAttribute="height" constant="15" id="b71-qT-FyM"/>
@@ -50,6 +53,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benfica - Porto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGs-0E-amU">
                                                     <rect key="frame" x="70" y="8" width="522" height="27"/>
+                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="27" id="jtJ-3M-fUW"/>
                                                     </constraints>
@@ -58,6 +62,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="dUY-zH-f0b" firstAttribute="bottom" secondItem="WGs-0E-amU" secondAttribute="bottom" id="IAV-f8-nq9"/>
                                                 <constraint firstItem="WGs-0E-amU" firstAttribute="leading" secondItem="dUY-zH-f0b" secondAttribute="trailing" constant="2" id="Igu-Aq-ap9"/>
@@ -68,6 +73,7 @@
                                                 <constraint firstItem="dUY-zH-f0b" firstAttribute="leading" secondItem="p4G-SS-Rnz" secondAttribute="leadingMargin" id="zVk-5I-d7E"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <animations/>
                                         <connections>
                                             <outlet property="channelName" destination="GoQ-TU-x3X" id="RCh-3x-seX"/>
                                             <outlet property="teams" destination="WGs-0E-amU" id="WFy-6G-6p5"/>
@@ -84,11 +90,13 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-05-05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbM-oS-Fgz">
                                                     <rect key="frame" x="8" y="8" width="584" height="27.5"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" weight="black" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <animations/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="fbM-oS-Fgz" secondAttribute="bottom" id="CHU-3f-nz7"/>
@@ -97,6 +105,7 @@
                                                 <constraint firstItem="fbM-oS-Fgz" firstAttribute="top" secondItem="FYD-bx-hvq" secondAttribute="topMargin" id="wT9-4T-rlw"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <animations/>
                                         <connections>
                                             <outlet property="date" destination="fbM-oS-Fgz" id="Yn5-Ar-wxU"/>
                                         </connections>
@@ -104,6 +113,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="I6E-4Y-Bqb" secondAttribute="bottom" id="Ojz-n8-dPn"/>
@@ -135,6 +145,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huC-Vv-9Xl">
                                 <rect key="frame" x="20" y="101" width="503" height="58"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="4L8-OC-3wf"/>
                                 </constraints>
@@ -144,6 +155,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Np-Hn-FXx">
                                 <rect key="frame" x="20" y="167" width="503" height="58"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="HLX-Gd-93q"/>
                                 </constraints>
@@ -153,12 +165,14 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lRB-dz-oO6">
                                 <rect key="frame" x="531" y="180" width="51" height="31"/>
+                                <animations/>
                                 <connections>
                                     <action selector="awayTeamFavouriteChanged:" destination="tRB-yi-bUd" eventType="valueChanged" id="YFY-lw-zLk"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LiF-z7-4BJ">
                                 <rect key="frame" x="498.5" y="72" width="81.5" height="19.5"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="82" id="xPa-dn-3tg"/>
                                 </constraints>
@@ -168,11 +182,13 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GvA-hd-KOD">
                                 <rect key="frame" x="531" y="114" width="51" height="31"/>
+                                <animations/>
                                 <connections>
                                     <action selector="homeTeamFavouriteChanged:" destination="tRB-yi-bUd" eventType="valueChanged" id="fuq-j2-vLY"/>
                                 </connections>
                             </switch>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="huC-Vv-9Xl" firstAttribute="top" secondItem="LiF-z7-4BJ" secondAttribute="bottom" constant="10" id="5me-ZB-sVh"/>
@@ -207,6 +223,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XQJ-kY-i8C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="Aku-Z3-leY" kind="relationship" relationship="rootViewController" id="JEK-gY-Z6g"/>

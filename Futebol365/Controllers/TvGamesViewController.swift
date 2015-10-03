@@ -1,4 +1,4 @@
-  //
+//
 //  TvGamesViewController.swift
 //  Futebol365
 //
@@ -19,34 +19,18 @@ class TvGamesTableViewHeader: UITableViewCell {
 class TvGamesTableViewCell: UITableViewCell {
    
    static let cellIdentifier = "TvGamesCellIdentifier"
-   var item: FPTGame?
+   var item: GameViewModel?
    
    @IBOutlet weak var teams: UILabel!
    @IBOutlet weak var time: UILabel!
    @IBOutlet weak var channelName: UILabel!
    
    func updateStyle() {
-      if let gameItem = item {
-         let timeSinceGameStart = moment().intervalSince(gameItem.dateMoment)
-         if timeSinceGameStart.seconds > 0 {
-            if timeSinceGameStart.minutes <= 120 {
-               let green = UIColor(red: 0, green: 128/255, blue: 0, alpha: 1)
-               teams.font = UIFont.systemFontOfSize(teams.font.pointSize, weight: UIFontWeightLight)
-               teams.textColor = green
-               time.textColor = green
-               channelName.textColor = green
-            } else {
-               teams.font = UIFont.systemFontOfSize(teams.font.pointSize, weight: UIFontWeightThin)
-               teams.textColor = UIColor.lightGrayColor()
-               time.textColor = UIColor.lightGrayColor()
-               channelName.textColor = UIColor.lightGrayColor()
-            }
-         } else {
-            teams.font = UIFont.systemFontOfSize(teams.font.pointSize, weight: UIFontWeightLight)
-            teams.textColor = UIColor.darkGrayColor()
-            time.textColor = UIColor.darkGrayColor()
-            channelName.textColor = UIColor.darkGrayColor()
-         }
+      if let gameViewModel = item {
+         teams.font = gameViewModel.teamsFont
+         teams.textColor = gameViewModel.teamsTextColor
+         time.textColor = gameViewModel.timeTextColor
+         channelName.textColor = gameViewModel.channelNameTextColor
       }
    }
    
@@ -87,7 +71,7 @@ class TvGamesTableDataSource: NSObject, UITableViewDataSource {
    
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCellWithIdentifier(TvGamesTableViewCell.cellIdentifier) as? TvGamesTableViewCell
-      cell?.item = allItems[indexPath.section].items[indexPath.row]
+      cell?.item = GameViewModel(game: allItems[indexPath.section].items[indexPath.row])
       return cell!
    }
    
@@ -100,11 +84,9 @@ class TvGamesTableDelegate: NSObject, UITableViewDelegate {
    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
       
       if let tableCell = cell as? TvGamesTableViewCell {
-         let homeTeamName = tableCell.item!.homeTeamName + (tableCell.item!.homeTeamCurrentUserFavourite ? " *" : "")
-         let awayTeamName = tableCell.item!.awayTeamName + (tableCell.item!.awayTeamCurrentUserFavourite ? " *" : "")
-         tableCell.teams.text = "\(homeTeamName) - \(awayTeamName)"
-         tableCell.time.text = tableCell.item!.dateMoment.format("HH:mm")
-         tableCell.channelName.text = tableCell.item?.tvChannel
+         tableCell.teams.text = tableCell.item!.teamsText
+         tableCell.time.text = tableCell.item!.timeText
+         tableCell.channelName.text = tableCell.item!.channelNameText
          tableCell.updateStyle()
       }
       
@@ -220,8 +202,6 @@ class TvGamesViewController: UIViewController, NSURLConnectionDataDelegate {
       tableView.dataSource = tableDataSource
       tableView.delegate = tableDelegate
       gamesDataSource.loadGames()
-      
-      let ud = NSUserDefaults(suiteName: "group.com.amg.Futebol365")
    }
    
    override func viewWillAppear(animated: Bool) {

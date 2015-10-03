@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
    
    private var favourites: [FPTFavouriteTeam] = []
    
-   var item: FPTGame!
+   var item: GameViewModel!
    
    // MARK: UIViewController
    
@@ -33,10 +33,10 @@ class DetailViewController: UIViewController {
                if allFavourites.count > 0 {
                   self.favourites = results as! [FPTFavouriteTeam]
                   for favourite in allFavourites {
-                     if favourite.team == self.item.homeTeam {
+                     if favourite.team == self.item.game.homeTeam {
                         self.homeTeamFavourite.setOn(true, animated: true)
                      }
-                     if favourite.team == self.item.awayTeam {
+                     if favourite.team == self.item.game.awayTeam {
                         self.awayTeamFavourite.setOn(true, animated: true)
                      }
                   }
@@ -55,17 +55,17 @@ class DetailViewController: UIViewController {
    
    @IBAction func homeTeamFavouriteChanged(sender: UISwitch) {
       if sender.on {
-         addFavourite(item.homeTeam)
+         addFavourite(item.game.homeTeam)
       } else {
-         removeFavourite(item.homeTeam)
+         removeFavourite(item.game.homeTeam)
       }
    }
    
    @IBAction func awayTeamFavouriteChanged(sender: UISwitch) {
       if sender.on {
-         addFavourite(item.awayTeam)
+         addFavourite(item.game.awayTeam)
       } else {
-         removeFavourite(item.awayTeam)
+         removeFavourite(item.game.awayTeam)
       }
    }
    
