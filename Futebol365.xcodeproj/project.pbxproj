@@ -45,6 +45,7 @@
 		20B31B0E1B8A18CF002B5308 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31B0A1B8A18CF002B5308 /* Parse.framework */; };
 		20B31B0F1B8A18CF002B5308 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31B0B1B8A18CF002B5308 /* ParseCrashReporting.framework */; };
 		20B31B101B8A18CF002B5308 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B31B0C1B8A18CF002B5308 /* ParseUI.framework */; };
+		20DBA0621BC072F300D00871 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 20DBA0611BC072F300D00871 /* README.md */; settings = {ASSET_TAGS = (); }; };
 		20E181221BAEDE2800E0E5AB /* FPTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2090E2961B8D188900C8BE48 /* FPTConstants.swift */; settings = {ASSET_TAGS = (); }; };
 		5474C93D85B0756B611A941B /* Pods_Futebol365.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94CC59F61A4EBEF823968E3 /* Pods_Futebol365.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -116,6 +117,7 @@
 		20B31B0A1B8A18CF002B5308 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		20B31B0B1B8A18CF002B5308 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
 		20B31B0C1B8A18CF002B5308 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		20DBA0611BC072F300D00871 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		20E181231BB1CC1A00E0E5AB /* Futebol365.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Futebol365.entitlements; sourceTree = "<group>"; };
 		20E181241BB1CC7000E0E5AB /* NextGameExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = NextGameExtension.entitlements; sourceTree = "<group>"; };
 		AFB24A55F6454469695E75A8 /* Pods-Futebol365.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Futebol365.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Futebol365/Pods-Futebol365.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		20B31AB61B89DDD3002B5308 = {
 			isa = PBXGroup;
 			children = (
+				20DBA0611BC072F300D00871 /* README.md */,
 				2062E4131BAD77A400E4B0B4 /* TODO */,
 				20B31AFA1B89EAB3002B5308 /* Frameworks */,
 				207D13461BA4AA61001F4D1B /* NextGameExtension */,
@@ -554,6 +557,7 @@
 				20B31B061B8A177E002B5308 /* FPTGame.swift in Sources */,
 				20B31B031B8A1648002B5308 /* TvGamesViewController.swift in Sources */,
 				204E36641B8CFF7C00A063A3 /* FPTAppConfiguration.swift in Sources */,
+				20DBA0621BC072F300D00871 /* README.md in Sources */,
 				2090E2971B8D188900C8BE48 /* FPTConstants.swift in Sources */,
 				204661571BAE07A800B47003 /* FPTFavouriteTeam.swift in Sources */,
 			);
