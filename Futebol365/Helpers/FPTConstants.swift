@@ -23,6 +23,7 @@ class FPTConstants {
    class Notifications {
       static let GamesDataSourceUpdatedNotification = "com.amg.Futebol365.GamesDataSourceUpdatedNotification"
       static let FavouritesUpdatedNotification = "com.amg.Futebol365.FavouritesUpdatedNotification"
+      static let LoggedInUserChangedNotification = "com.amg.Futebol365.LoggedInUserChangedNotification"
    }
 
 }

@@ -15,7 +15,8 @@ class NextGamesExtensionViewController: UIViewController, UITableViewDataSource,
    
    private var items: [FPTGame] = []
    private var needsUpdate = false
-   
+   private var currentUser: PFUser?
+
    @IBOutlet weak var tableView: UITableView!
    
    //MARK: UIViewController
@@ -23,16 +24,12 @@ class NextGamesExtensionViewController: UIViewController, UITableViewDataSource,
    override func awakeFromNib() {
       super.awakeFromNib()
       
-      Parse.setApplicationId("0N1kCdAA5d2A7vMyrEqJON06vZVfjp4z5NSgjNzD", clientKey: "oHQ9MeJ64rJoFdQgqqbfiJSB12qXBrBhsjTiTu8y")
-      
-      getItems { (items, error) -> Void in
-         if error == nil && items != nil {
-            self.needsUpdate = true
-            self.items = items!
-            self.tableView.reloadData()
-            self.preferredContentSize = self.tableView.contentSize
-         }
+      if !Parse.isLocalDatastoreEnabled() {
+         Parse.enableDataSharingWithApplicationGroupIdentifier("group.com.amg.Futebol365", containingApplication: "com.amg.Futebol365")
+         Parse.setApplicationId("0N1kCdAA5d2A7vMyrEqJON06vZVfjp4z5NSgjNzD", clientKey: "oHQ9MeJ64rJoFdQgqqbfiJSB12qXBrBhsjTiTu8y")
       }
+      
+      self.currentUser = PFUser.currentUser()
       
    }
    
@@ -89,7 +86,7 @@ class NextGamesExtensionViewController: UIViewController, UITableViewDataSource,
    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
       if let cell = cell as? NextGamesExtensionCell {
          let game = items[indexPath.row]
-         cell.teamsLabel.text = "\(game.homeTeamName) - \(game.awayTeamName)"
+         cell.teamsLabel.text = "\(currentUser?.username) \(game.homeTeamName) - \(game.awayTeamName)"
          cell.dateLabel.text = game.dateMoment.format("HH:mm") + " @ " + game.tvChannel
       }
    }
@@ -97,17 +94,38 @@ class NextGamesExtensionViewController: UIViewController, UITableViewDataSource,
    //MARK: Private
    
    private func getItems(completionBlock: (items: [FPTGame]?, error: NSError?)->Void) {
+      
+      let query1 = PFQuery(className: FPTGame.parseClassName())
+      query1.whereKey("date", greaterThan: moment().substract(120, TimeUnit.Minutes).date())
+      query1.whereKey("date", lessThanOrEqualTo: moment().endOf(TimeUnit.Days).date())
+      query1.orderByAscending("date")
+      
+      let query2 = query1.copy() as! PFQuery
+      
+      let finalQuery = PFQuery.orQueryWithSubqueries([query1, query2])
 
-      let query = PFQuery(className: FPTGame.parseClassName())
-      query.whereKey("date", greaterThan: moment().substract(120, TimeUnit.Minutes).date())
-      query.whereKey("date", lessThanOrEqualTo: moment().endOf(TimeUnit.Days).date())
-      query.orderByAscending("date")
-      query.findObjectsInBackgroundWithBlock { (items, error) -> Void in
-         if error == nil {
-            completionBlock(items: items as? [FPTGame], error: nil)
+      PFUser.getCurrentUserFavourites { (favourites, error) -> Void in
+         if error == nil && favourites?.count > 0 {
+            let favouriteTeams = (favourites as! [FPTFavouriteTeam]).map({ $0.team })
+            query1.whereKey("homeTeam", containedIn: favouriteTeams)
+            query2.whereKey("awayTeam", containedIn: favouriteTeams)
+            finalQuery.findObjectsInBackgroundWithBlock({ (games, error) -> Void in
+               if error == nil {
+                  completionBlock(items: games as? [FPTGame], error: nil)
+               } else {
+                  completionBlock(items: nil, error: error)
+                  print("error getting items from local storage: \(error)")
+               }
+            })
          } else {
-            completionBlock(items: nil, error: error)
-            print("error getting items from local storage: \(error)")
+            query1.findObjectsInBackgroundWithBlock({ (games, error) -> Void in
+               if error == nil {
+                  completionBlock(items: games as? [FPTGame], error: nil)
+               } else {
+                  completionBlock(items: nil, error: error)
+                  print("error getting items from local storage: \(error)")
+               }
+            })
          }
       }
 

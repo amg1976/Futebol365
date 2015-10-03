@@ -116,6 +116,8 @@
 		20B31B0A1B8A18CF002B5308 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		20B31B0B1B8A18CF002B5308 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
 		20B31B0C1B8A18CF002B5308 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		20E181231BB1CC1A00E0E5AB /* Futebol365.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Futebol365.entitlements; sourceTree = "<group>"; };
+		20E181241BB1CC7000E0E5AB /* NextGameExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = NextGameExtension.entitlements; sourceTree = "<group>"; };
 		AFB24A55F6454469695E75A8 /* Pods-Futebol365.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Futebol365.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Futebol365/Pods-Futebol365.debug.xcconfig"; sourceTree = "<group>"; };
 		B516E300B7E7F92E76F23B2B /* Pods-Futebol365.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Futebol365.release.xcconfig"; path = "Pods/Target Support Files/Pods-Futebol365/Pods-Futebol365.release.xcconfig"; sourceTree = "<group>"; };
 		E94CC59F61A4EBEF823968E3 /* Pods_Futebol365.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Futebol365.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 		207D13461BA4AA61001F4D1B /* NextGameExtension */ = {
 			isa = PBXGroup;
 			children = (
+				20E181241BB1CC7000E0E5AB /* NextGameExtension.entitlements */,
 				207D13471BA4AA61001F4D1B /* NextGamesExtensionViewController.swift */,
 				207D13491BA4AA61001F4D1B /* MainInterface.storyboard */,
 				207D134C1BA4AA61001F4D1B /* Info.plist */,
@@ -219,6 +222,7 @@
 		20B31AC11B89DDD3002B5308 /* Futebol365 */ = {
 			isa = PBXGroup;
 			children = (
+				20E181231BB1CC1A00E0E5AB /* Futebol365.entitlements */,
 				204E36621B8CFF5000A063A3 /* Helpers */,
 				20B31AE41B89DE2C002B5308 /* External */,
 				20B31B041B8A1661002B5308 /* Models */,
@@ -403,10 +407,26 @@
 					207D13421BA4AA61001F4D1B = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = M65H29N762;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					20B31ABE1B89DDD3002B5308 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = M65H29N762;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					20B31AD31B89DDD3002B5308 = {
 						CreatedOnToolsVersion = 6.4;
@@ -593,7 +613,9 @@
 		207D13501BA4AA61001F4D1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NextGameExtension/NextGameExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -605,6 +627,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amg.Futebol365.NextGameExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -612,7 +635,9 @@
 		207D13511BA4AA61001F4D1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NextGameExtension/NextGameExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -623,6 +648,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amg.Futebol365.NextGameExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -714,7 +740,9 @@
 			baseConfigurationReference = AFB24A55F6454469695E75A8 /* Pods-Futebol365.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Futebol365/Futebol365.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -725,6 +753,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.amg.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Futebol365-Bridging-Header.h";
 			};
 			name = Debug;
@@ -734,7 +763,9 @@
 			baseConfigurationReference = B516E300B7E7F92E76F23B2B /* Pods-Futebol365.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Futebol365/Futebol365.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -745,6 +776,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.amg.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Futebol365-Bridging-Header.h";
 			};
 			name = Release;

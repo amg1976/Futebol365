@@ -191,6 +191,7 @@ class TvGamesViewController: UIViewController, NSURLConnectionDataDelegate {
    private let tableDelegate = TvGamesTableDelegate()
    private var notificationObserver: NSObjectProtocol?
    private var favouritesObserver: NSObjectProtocol?
+   private var loggedInObserver: NSObjectProtocol?
    private var shouldReloadData = false
    
    @IBOutlet var tableView: UITableView!
@@ -213,9 +214,14 @@ class TvGamesViewController: UIViewController, NSURLConnectionDataDelegate {
       favouritesObserver = NSNotificationCenter.defaultCenter().addObserverForName(FPTConstants.Notifications.FavouritesUpdatedNotification, object: nil, queue: nil, usingBlock: { (notification) -> Void in
          self.shouldReloadData = true
       })
+      loggedInObserver = NSNotificationCenter.defaultCenter().addObserverForName(FPTConstants.Notifications.LoggedInUserChangedNotification, object: nil, queue: nil, usingBlock: { (notification) -> Void in
+         self.gamesDataSource.loadGames()
+      })
       tableView.dataSource = tableDataSource
       tableView.delegate = tableDelegate
       gamesDataSource.loadGames()
+      
+      let ud = NSUserDefaults(suiteName: "group.com.amg.Futebol365")
    }
    
    override func viewWillAppear(animated: Bool) {

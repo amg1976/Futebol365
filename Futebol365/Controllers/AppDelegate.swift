@@ -20,13 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    
    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
       
-      Parse.enableLocalDatastore()
       ParseCrashReporting.enable()
+      Parse.enableLocalDatastore()
+      Parse.enableDataSharingWithApplicationGroupIdentifier("group.com.amg.Futebol365")
       Parse.setApplicationId("0N1kCdAA5d2A7vMyrEqJON06vZVfjp4z5NSgjNzD", clientKey: "oHQ9MeJ64rJoFdQgqqbfiJSB12qXBrBhsjTiTu8y")
       
       let currentUser = PFUser.currentUser()
       if currentUser != nil {
-         // Do stuff with the user
+         print("current user not nil")
       } else {
          let user = PFUser()
          user.username = "amg1976"
@@ -36,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
                print("user logged in")
+               NSNotificationCenter.defaultCenter().postNotificationName(FPTConstants.Notifications.LoggedInUserChangedNotification, object: nil)
             } else {
                self.dummySignup(user!)
             }
@@ -54,6 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                print("error on signup: \(errorString)")
             }
          } else {
+            print("user logged in")
+            NSNotificationCenter.defaultCenter().postNotificationName(FPTConstants.Notifications.LoggedInUserChangedNotification, object: nil)
          }
       }
    }
